@@ -4,6 +4,41 @@
  }
 
  #main_header{
-     height: 10%;
-     width: 100%;
+     position: relative;
+     top: 0;
  }
+
+ #main_header{
+     background-color: white;
+     height: 10%;
+ }
+
+ #main_header img{
+    margin: 0;
+    padding: 0.5%;
+ }
+
+ #title{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    right: 0;
+    top: 30%;
+    left: 0;
+ }
+
+ #last_updated{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+ }
+
+ #content{
+     background-color:darkgray;
+     position: relative;
+     height: 90%;
+     bottom: 0;
+ }
+
+
+ 

@@ -1,34 +1,44 @@
 <html>
 
-<meta>
-<link rel="stylesheet" href="master.css">
-</meta>
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-<head>
-    <title>BBS Wittlich Wettterstation - Vers. 0.1</title>
-</head>
+    <meta>
+        <link rel="stylesheet" href="master.css">
+    </meta>
 
-<body>
-    <div id="main_header">
-        <!-- Main Header with Logo and last updated line -->
-        <table>
-            <tr>
-                <td><img src="/img/logo-header.png" alt=""></td>
-                <td><h1>Wetterstation</h1></td>
-                <td><p>Zuletzt aktualisiert am: [PLACEHOLDER_LASTUPDATED]</p></td>
-            </tr>
-        </table>
-    </div>
-    <div id="content">
-        <!--ONLY PLACEHOLDER: Dynamic generated Div Container from Django in Relation to thhe inserted JSON File on the Server-->
-        <div class="content_container">
+    
 
+    <head>
+        <title>BBS Wittlich Wettterstation - Vers. 0.1</title>
+    </head>
+
+    <body>
+        <div id="main_header">
+            <img src="..\img\logo-header.png" alt="">
+            <h1 id="title">Wetterstation</h1>
+            <p id="last_updated">Zuletzt aktualisiert am: [PLACEHOLDER_LASTUPDATED]</p>
+        </div>
+
+        <div id="content">
+            <!--ONLY PLACEHOLDER: Dynamic generated Div Container from Django in Relation to thhe inserted JSON File on the Server-->
+
+            <!--CAKE DIAGRAM-->
+            <div class="content_container">
+                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+                <script>
+                    fPie(90);
+                </script>
+            </div>
+
+            <!--ONLY PLACEHOLDER: Dynamic generated Div Container from Django in Relation to thhe inserted JSON File on the Server-->
+        </div>
+
+        <div id="footer">
 
         </div>
-        <!--ONLY PLACEHOLDER: Dynamic generated Div Container from Django in Relation to thhe inserted JSON File on the Server-->
-    </div>
-    <div id="footer">
-
-    </div>
-</body>
+    </body>
 </html>
+
+
