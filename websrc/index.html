@@ -2,12 +2,11 @@
 
     <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script> var humidity = 50; </script>
 
     <meta>
         <link rel="stylesheet" href="master.css">
     </meta>
-
-    
 
     <head>
         <title>BBS Wittlich Wettterstation - Vers. 0.1</title>
@@ -25,12 +24,15 @@
 
             <!--CAKE DIAGRAM-->
             <div class="content_container">
+                <h3>Luftfeuchtigkeit</h3>
+                
                 <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-
                 <script>
-                    fPie(90);
+                    fPie(humidity);
                 </script>
+                <h2 id="Value"><script type="text/javascript">document.write(humidity)</script>%</h2>
             </div>
+            <!--CAKE DIAGRAM-->
 
             <!--ONLY PLACEHOLDER: Dynamic generated Div Container from Django in Relation to thhe inserted JSON File on the Server-->
         </div>

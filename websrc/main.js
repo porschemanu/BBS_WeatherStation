@@ -5,11 +5,11 @@ function fPie(humidity){
     var yValues = [yRestValue,yValue];
     var barColors = [
       "#111111",
-      "#ffffff"
+      "#0000ff"
     ];
     
     new Chart("myChart", {
-        type: 'pie',
+        type: 'doughnut',
         data: {
             datasets: [{
             backgroundColor: barColors,
