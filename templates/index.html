@@ -1,11 +1,10 @@
 <html>
 
-    <script src="main.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script> var humidity = 50; </script>
-
+    
     <meta>
-        <link rel="stylesheet" href="master.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
     </meta>
 
     <head>
@@ -14,23 +13,24 @@
 
     <body>
         <div id="main_header">
-            <img src="..\img\logo-header.png" alt="">
+            <img src="{{ url_for('static', filename='img/logo-header.png') }}" alt="">
             <h1 id="title">Wetterstation</h1>
             <p id="last_updated">Zuletzt aktualisiert am: [PLACEHOLDER_LASTUPDATED]</p>
         </div>
 
         <div id="content">
-            <!--ONLY PLACEHOLDER: Dynamic generated Div Container from Django in Relation to thhe inserted JSON File on the Server-->
+            <!--ONLY PLACEHOLDER: Dynamic generated Div Container from Django in Relation to the inserted JSON File on the Server-->
 
             <!--CAKE DIAGRAM-->
             <div class="content_container">
                 <h3>Luftfeuchtigkeit</h3>
-                
+                <h2 id="humidity">{{test}}</h2>
                 <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-                <script>
+                <script type="text/javascript">
+                    var humidity = document.getElementById('humidity').textContent;
                     fPie(humidity);
                 </script>
-                <h2 id="Value"><script type="text/javascript">document.write(humidity)</script>%</h2>
+                
             </div>
             <!--CAKE DIAGRAM-->
 
