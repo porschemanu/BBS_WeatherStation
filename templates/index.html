@@ -15,7 +15,7 @@
     <div id="main_header">
         <img src="{{ url_for('static', filename='img/logo-header.png') }}" alt="">
         <h1 id="title">Wetterstation</h1>
-        <p id="last_updated">Zuletzt aktualisiert am: [PLACEHOLDER_LASTUPDATED]</p>
+        <p id="last_updated">Zuletzt aktualisiert am: </p>
     </div>
 
     <div id="content">
@@ -24,33 +24,7 @@
         <!--CAKE DIAGRAM-->
         <div class="content_container">
             <h3>Luftfeuchtigkeit</h3>
-            <h2 id="humidity">{{humidity}}</h2>
-            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-            <script type="text/javascript">
-                var humidity = document.getElementById('humidity').textContent;
-                fPie(humidity);
-            </script>
-
-        </div>
-        <!--CAKE DIAGRAM-->
-
-        <!--CAKE DIAGRAM-->
-        <div class="content_container">
-            <h3>Luftfeuchtigkeit</h3>
-            <h2 id="humidity">{{airpressure}}</h2>
-            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-            <script type="text/javascript">
-                var humidity = document.getElementById('humidity').textContent;
-                fPie(humidity);
-            </script>
-
-        </div>
-        <!--CAKE DIAGRAM-->
-
-        <!--CAKE DIAGRAM-->
-        <div class="content_container">
-            <h3>Luftfeuchtigkeit</h3>
-            <h2 id="humidity">{{temperature}}</h2>
+            <h2 id="humidity"></h2>
             <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
             <script type="text/javascript">
                 var humidity = document.getElementById('humidity').textContent;
@@ -64,7 +38,43 @@
     </div>
 
     <div id="footer">
-
+        <div id="HiddenContainer">
+            <table>
+                <tr>
+                    <td>Values:</td>
+                </tr>
+                <tr>
+                    <td>temperature</td><td>{{temperature}}</td>
+                </tr>
+                <tr>
+                    <td>humidity</td><td>{{humidity}}</td>
+                </tr>
+                <tr>
+                    <td>airpressure</td><td>{{airpressure}}</td>
+                </tr>
+                <tr>
+                    <td>last_update</td><td>{{last_update}}</td>
+                </tr>
+                <tr>
+                    <td>Lists</td>
+                </tr>
+                <tr>
+                    <td>list_temperature</td><td>{{list_temperature}}</td>
+                </tr>
+                <tr>
+                    <td>list_humidity</td><td>{{list_humidity}}</td>
+                </tr>
+                <tr>
+                    <td>list_airpressure</td><td>{{list_airpressure}}</td>
+                </tr>
+                <tr>
+                    <td>list_timecode</td><td>{{list_timecode}}</td>
+                </tr>
+                <tr>
+                    <td>list_fieldname</td><td>{{list_fieldname}}</td>
+                </tr>
+            </table>
+        </div>
     </div>
 </body>
 
