@@ -3,6 +3,8 @@
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
+
+
 <meta>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
 </meta>
@@ -15,20 +17,29 @@
     <div id="main_header">
         <img src="{{ url_for('static', filename='img/logo-header.png') }}" alt="">
         <h1 id="title">Wetterstation</h1>
-        <p id="last_updated">Zuletzt aktualisiert am: </p>
+        <p id="last_update"> </p>
     </div>
 
     <div id="content">
+
+        <script>
+            
+        </script>
+
         <!--ONLY PLACEHOLDER: Dynamic generated Div Container from Django in Relation to the inserted JSON File on the Server-->
 
         <!--CAKE DIAGRAM-->
         <div class="content_container">
+
+
+
+
             <h3>Luftfeuchtigkeit</h3>
-            <h2 id="humidity"></h2>
+
             <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
             <script type="text/javascript">
-                var humidity = document.getElementById('humidity').textContent;
-                fPie(humidity);
+                var humidity =
+                    fPie(humidity);
             </script>
 
         </div>
@@ -36,46 +47,20 @@
 
         <!--ONLY PLACEHOLDER: Dynamic generated Div Container from Django in Relation to thhe inserted JSON File on the Server-->
     </div>
-
-    <div id="footer">
-        <div id="HiddenContainer">
-            <table>
-                <tr>
-                    <td>Values:</td>
-                </tr>
-                <tr>
-                    <td>temperature</td><td>{{temperature}}</td>
-                </tr>
-                <tr>
-                    <td>humidity</td><td>{{humidity}}</td>
-                </tr>
-                <tr>
-                    <td>airpressure</td><td>{{airpressure}}</td>
-                </tr>
-                <tr>
-                    <td>last_update</td><td>{{last_update}}</td>
-                </tr>
-                <tr>
-                    <td>Lists</td>
-                </tr>
-                <tr>
-                    <td>list_temperature</td><td>{{list_temperature}}</td>
-                </tr>
-                <tr>
-                    <td>list_humidity</td><td>{{list_humidity}}</td>
-                </tr>
-                <tr>
-                    <td>list_airpressure</td><td>{{list_airpressure}}</td>
-                </tr>
-                <tr>
-                    <td>list_timecode</td><td>{{list_timecode}}</td>
-                </tr>
-                <tr>
-                    <td>list_fieldname</td><td>{{list_fieldname}}</td>
-                </tr>
-            </table>
-        </div>
-    </div>
 </body>
+
+<script>
+    var temperature = {{ temperature }};
+    var humidity = {{ humidity }};
+    var airpressure = {{ airpressure }};
+    var last_update = new Date('{{last_update}}');
+
+    list_temperature = {{ list_temperature | tojson }};
+    console.log(list_temperature[1])
+    list_humidity = {{ list_humidity | tojson }};
+    list_airpressure = {{ list_airpressure | tojson }};
+    list_timecode = {{ list_timecode | tojson }};
+
+</script>
 
 </html>
