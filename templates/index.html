@@ -17,50 +17,15 @@
     <div id="main_header">
         <img src="{{ url_for('static', filename='img/logo-header.png') }}" alt="">
         <h1 id="title">Wetterstation</h1>
-        <p id="last_update"> </p>
+        <p id="last_update">Test </p>
     </div>
 
     <div id="content">
-
-        <script>
-            
-        </script>
-
-        <!--ONLY PLACEHOLDER: Dynamic generated Div Container from Django in Relation to the inserted JSON File on the Server-->
-
-        <!--CAKE DIAGRAM-->
-        <div class="content_container">
-
-
-
-
-            <h3>Luftfeuchtigkeit</h3>
-
-            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-            <script type="text/javascript">
-                var humidity =
-                    fPie(humidity);
-            </script>
-
-        </div>
-        <!--CAKE DIAGRAM-->
-
-        <!--ONLY PLACEHOLDER: Dynamic generated Div Container from Django in Relation to thhe inserted JSON File on the Server-->
     </div>
+
+    <script>
+        document.getElementById("content").innerHTML = content_builder({{ entries_number }}, {{ input_array|tojson }}, {{entries_title|tojson}});
+    </script>
 </body>
-
-<script>
-    var temperature = {{ temperature }};
-    var humidity = {{ humidity }};
-    var airpressure = {{ airpressure }};
-    var last_update = new Date('{{last_update}}');
-
-    list_temperature = {{ list_temperature | tojson }};
-    console.log(list_temperature[1])
-    list_humidity = {{ list_humidity | tojson }};
-    list_airpressure = {{ list_airpressure | tojson }};
-    list_timecode = {{ list_timecode | tojson }};
-
-</script>
 
 </html>
