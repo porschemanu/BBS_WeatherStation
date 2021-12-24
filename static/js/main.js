@@ -1,10 +1,3 @@
-function saveSettings(){
-    return ''
-};
-
-
-
-
 function content_builder(entries_count, array_of_entries, entries_title) {
     i = 0;
     var output = '';

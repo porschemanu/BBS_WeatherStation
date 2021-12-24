@@ -1,8 +1,10 @@
 from flask import Flask, redirect, url_for, render_template
 import json
-import datetime
-
+from flask_cors import CORS, cross_origin
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
+
 
 def valueloader():
     data = json.load(open('data/test.json'))
@@ -20,7 +22,8 @@ def valueloader():
     list_feed = data['feeds']
     numberentries = len(list_feed)
     numberdata = len(list_fieldname) + 1
-    output_array = [[0 for x in range(numberdata)]for x in range(numberentries)]    
+    output_array = [[0 for x in range(numberdata)]
+                    for x in range(numberentries)]
     tempstring = ''
     x = 0
     y = 0
@@ -38,11 +41,26 @@ def valueloader():
     return numberdata, output_array, list_fieldname
 
 
+def settingsloader():
+    return ''
+
+
 @app.route("/")
 def home():
-    numberdata, output_array, list_fieldname = valueloader();
-    return render_template("index.html",entries_number = numberdata ,input_array = output_array, entries_title= list_fieldname)
+    numberdata, output_array, list_fieldname = valueloader()
+    return render_template("index.html", entries_number=numberdata, input_array=output_array, entries_title=list_fieldname)
 
+
+@app.route("/settings")
+def setting():
+    return render_template("settings.html")
+
+# A function to add two numbers
+@app.route("/add")
+def add():
+    a = request.args.get('a')
+    b = request.args.get('b')
+    return jsonify({"result": a+b})
 
 if __name__ == "__main__":
     app.run()
