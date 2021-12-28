@@ -1,9 +1,70 @@
 from flask import Flask, redirect, url_for, render_template
 import json
-from flask_cors import CORS, cross_origin
 app = Flask(__name__)
-cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+
+#Data Fetching Functions
+def GetWeatherData():
+    WeatherDataRAW = json.load(open('data/test.json'))
+
+    ListOfChannelData = WeatherDataRAW['channel']
+    ListOfValueEntries = WeatherDataRAW['feeds']
+    ListOfValueNames = []
+    ListOfValueNames.clear()
+
+    #Getting the Name of the Values from the Channel
+    for DataEntry in ListOfChannelData:
+        if "field" in DataEntry:
+            ListOfValueNames.append(ListOfChannelData[DataEntry])
+
+    CountOfValueNames = len(ListOfValueNames) + 1
+    CountOfValueEntries = len(ListOfValueEntries)
+
+    #Building the Structure of the Array
+    WeatherDataArray = [[0 for x in range(CountOfValueNames)]
+                        for x in range(CountOfValueEntries)]
+
+    #Initialising the needed Values
+    _temp = ''
+    x = 0
+    y = 0
+
+    #Filling the Array with Data
+    while x < CountOfValueEntries:
+        DataEntry = ListOfValueEntries[x]
+        y = 0
+        while y < CountOfValueNames:
+            if y == 0:
+                WeatherDataArray[x][0] = DataEntry['created_at']
+            elif y < 4:
+                _temp = 'field' + str(y)
+                WeatherDataArray[x][y] = DataEntry[_temp]
+            y += 1
+        x += 1
+
+    return WeatherDataArray, ListOfValueNames, CountOfValueEntries, CountOfValueNames - 1
+
+def GetSettings():
+    return "todo"
+
+#Renderer render_template("index.html"
+@app.route("/")
+def index():
+    print(GetWeatherData())
+    return "todo"
+
+@app.route("/widget")
+def widget():
+    return "todo"
+
+@app.route("/settings")
+def settings():
+    return "todo"
+
+@app.route("/save_settings/<setting>")
+def SaveSettings():
+    return "todo"
+
+
 
 
 def valueloader():
@@ -40,25 +101,8 @@ def valueloader():
         x += 1
     return numberdata, output_array, list_fieldname
 
-
-def settingsloader():
-    return ''
-
-
-@app.route("/")
-def home():
-    numberdata, output_array, list_fieldname = valueloader()
-    return render_template("index.html", entries_number=numberdata, input_array=output_array, entries_title=list_fieldname)
-
-
-@app.route("/settings")
-def setting():
-    return render_template("settings.html")
-
-@app.route("/save_settings/<setting>")
 def save_settings(setting):
     return setting
-
 
 if __name__ == "__main__":
     app.run()
