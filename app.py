@@ -55,12 +55,10 @@ def home():
 def setting():
     return render_template("settings.html")
 
-# A function to add two numbers
-@app.route("/add")
-def add():
-    a = request.args.get('a')
-    b = request.args.get('b')
-    return jsonify({"result": a+b})
+@app.route("/save_settings/<setting>")
+def save_settings(setting):
+    return setting
+
 
 if __name__ == "__main__":
     app.run()

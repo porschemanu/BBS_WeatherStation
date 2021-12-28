@@ -61,21 +61,11 @@ function fDiagram(Diagram_Choice, Diagram_Title,xvalues,yvalues) {
 }
 
 function fTest(){
-    let first = 10;
-    let second = 20;
-    const options = {
-        method: 'GET',
-        mode: 'no-cors'
-    };
-
-        fetch('http://192.168.1.177:5000/add?a='+first+'&b='+second, options)
-        .then((response) => {
-        return response.json()
-        })
-        .then((myJson) => {
-        console.log("When I add "+first+" and "+second+" I get: " + myJson.result);
-        });
-        }
+    fetch('http://127.0.0.1:5000/save_settings/HalloWelt')
+        .then(response => response.text())
+        .then(data => console.log(data));
+}
+    
 
 //TODO: Settings. json for setting the diagrams
 
