@@ -31,8 +31,26 @@
 
 #JAVASCRIPT#
 
+-Functions
+    index_builder():
+        text
+    widget_builder():
+        text
+    settings_builder():
+        text
+    FetchSettings():
+    
+
 #HTML#
+
+-DIV
+    main_header:
+        text
+    content:
+        text
+    
 
 #CSS#
 
 #JSON#
+

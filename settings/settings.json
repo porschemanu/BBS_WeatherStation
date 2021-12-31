@@ -1,0 +1,14 @@
+{
+  "Value1": {
+    "DataName": "Temperatur",
+    "DiagramType": "bar" 
+  },
+  "Value2": {
+    "DataName": "Luftdruck",
+    "DiagramType": "cake" 
+  },
+  "Value3": {
+    "DataName": "Feuchtigkeit",
+    "DiagramType": "cake" 
+  }
+}

@@ -1,72 +1,53 @@
-function content_builder(entries_count, array_of_entries, entries_title) {
-    i = 0;
-    var output = '';
+function index_builder() {
+  
+}
 
-    while (i < entries_count - 1) {
-        output += '<div class="content_container">'
-            + '<h3>' + entries_title[i] + '</h3>'
-            + '<canvas class="diagram"></canvas> '
-            + '<script>fDiagram()</script>'
-            + '</div>'
-        i++;
-    }
+function widget_builder(){
 
+}
+
+//settings.html
+
+function LoadSettings(SettingsDataRaw){
+    SettingsDataRAW_parsed = JSON.parse(SettingsDataRaw);
+    output = []
+
+    for(var i in SettingsDataRAW_parsed)
+        output.push(SettingsDataRAW_parsed[i])
     return output;
 }
 
-function fDiagram_Choice(Entry_Title) {
-    var output = ''
+function settings_builder(inputarray){
+    CountOfEntries = inputarray.length
 
-    switch (Entry_Title) {
-        case 'Luftfeuchtigkeit':
-            return "doughnut"
+    output = '<div id="settings_table"><table>'
+    i = 0
 
-        case 'Temperatur':
-            return "bar"
-
-        case 'Luftdruck':
-            return "barometer"
-
-        default:
-            return "default"
+    while(i < CountOfEntries){
+        _TEMP = Object.values(inputarray[i])
+        output += '<tr><td>'+ _TEMP[0] +':</td><td><select></td></tr>'
+        i++
     }
+
+    output += '</table><br><button onClick="SaveSettings()">Test</button</div>' 
+    return output
 }
 
-function fDiagram(Diagram_Choice, Diagram_Title,xvalues,yvalues) {
-
-    var xValues = [Diagram_Title];
-    var yRestValue = 100 - value;
-    var yValues = [yRestValue, value];
-    var barColors = [
-        "#111111",
-        "#0000ff"
-    ];
-
-    new Chart("myChart", {
-        type: 'doughnut',
-        data: {
-            datasets: [{
-                backgroundColor: barColors,
-                data: yValues
-            }]
-        },
-        options: {
-            plugins: {
-                legend: false,
-                tooltip: false,
-            }
-        }
-    });
-
+function FetchSettings(){
+    console.log(document.getElementById('settings_table').textContent)
+    return "todo"
 }
 
-function fTest(){
-    fetch('http://127.0.0.1:5000/save_settings/HalloWelt')
-        .then(response => response.text())
-        .then(data => console.log(data));
+function SaveSettings(){
+    FetchSettings()
+
+    //fetch('http://127.0.0.1:5000/save_settings/HalloWelt')
+    //.then(response => response.text())
+    //if (response.text() == "true"){}
+    alert("Ihr Einstellungen wurden gespeichert")
+    
 }
     
 
-//TODO: Settings. json for setting the diagrams
-
 //TODO: Color change for temperatur
+//TODO: Research all Diagram Types for Dropdown Menu in Table
