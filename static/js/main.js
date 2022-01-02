@@ -1,6 +1,54 @@
-function index_builder() {
-  
+function Diagram(){
+
 }
+
+
+//BUILDER
+
+function index_builder(WeatherDataArray,ListOfValueNames,CountOfValueEntries,CountOfValueNames,SettingsDataRAW) {
+    /*
+    Handles the incoming Count of Values:
+    1 = Fullscreen of the one Value
+    2 = 50|50 
+    3 = 33|33|33
+    4 = 50|50
+        50|50
+    >4 = 3 Rows. Filled from left to right
+    */
+
+    output = '<table>'
+
+    switch (CountOfValueNames){
+        case 0:
+            output += '<h1>Es konnten keine Werte ausgelesen werden!</h1>'
+            break;
+        case 1:
+            output += '<tr><td>'+ get_diagram(ListOfValueNames[0],SettingsDataRAW) +'</td></tr>'
+            break;
+        case 2:
+            output += '<tr><td>'+ get_diagram(ListOfValueNames[0],SettingsDataRAW) +'</td><td>'+ get_diagram(ListOfValueNames[1],SettingsDataRAW) +'</td></tr>'
+            break;
+        case 3:
+            output += '<tr><td>'+ get_diagram(ListOfValueNames[0],SettingsDataRAW) +'</td><td>'+ get_diagram(ListOfValueNames[1],SettingsDataRAW) +'</td><td>'+ get_diagram(ListOfValueNames[2],SettingsDataRAW) +'</td></tr>'
+            break;
+        case 4:
+            output += '<tr><td>'+ get_diagram(ListOfValueNames[0],SettingsDataRAW) +'</td><td>'+ get_diagram(ListOfValueNames[1],SettingsDataRAW) +'</td></tr>'
+            output += '<tr><td>'+ get_diagram(ListOfValueNames[2],SettingsDataRAW) +'</td><td>'+ get_diagram(ListOfValueNames[3],SettingsDataRAW) +'</td></tr>'
+            break;
+        default:
+            break;
+    }
+    output += '</table>'
+    return output
+}
+
+function get_diagram(ValueName,SettingsDataRaw){
+    console.log(LoadSettings(SettingsDataRaw))
+
+    return ValueName
+}
+
+//widget.html
 
 function widget_builder(){
 
@@ -19,22 +67,31 @@ function LoadSettings(SettingsDataRaw){
 
 function settings_builder(inputarray){
     CountOfEntries = inputarray.length
+    temp = ''
 
     output = '<div id="settings_table"><table>'
     i = 0
 
+
     while(i < CountOfEntries){
         _TEMP = Object.values(inputarray[i])
-        output += '<tr><td>'+ _TEMP[0] +':</td><td><select></td></tr>'
+        output += '<tr><td><input id="'+ temp.concat("input", i) +'" value="'+ _TEMP[0] +':"></td><td><select id="Test'+ i +'"><option value="Diagram1">Diagram1</option><option value="Diagram2">Diagram2</option><option value="Diagram3">Diagram3</option></td></tr>'
         i++
     }
 
-    output += '</table><br><button onClick="SaveSettings()">Test</button</div>' 
+    output += '</table><br><button onClick="SaveSettings()">Submit</button</div>' 
     return output
 }
 
 function FetchSettings(){
-    console.log(document.getElementById('settings_table').textContent)
+    var count = document.getElementsByTagName("tr").length
+    console.log(count)
+    temp = ''
+    i = 0
+    while(i < count){
+        console.log(document.getElementById(temp.concat('Test', i)).value)
+        i++
+    }
     return "todo"
 }
 

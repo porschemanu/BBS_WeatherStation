@@ -23,6 +23,9 @@
     <div id="content">
     </div>
 
+    <script>
+        document.getElementById("content").innerHTML =  index_builder({{ WeatherDataArray|tojson }}, {{ ListOfValueNames|tojson }}, {{ CountOfValueEntries|tojson }}, {{ CountOfValueNames|tojson }},'{{SettingsDataRAW | tojson}}')
+    </script>
 </body>
 
 </html>

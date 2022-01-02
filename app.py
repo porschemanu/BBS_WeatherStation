@@ -50,8 +50,8 @@ def GetSettings():
 #Renderer render_template("index.html"
 @app.route("/")
 def index():
-    print(GetWeatherData())
-    return render_template("index.html")
+    WeatherDataArray, ListOfValueNames, CountOfValueEntries, CountOfValueNames = GetWeatherData()
+    return render_template("index.html",WeatherDataArray = WeatherDataArray, ListOfValueNames = ListOfValueNames, CountOfValueEntries = CountOfValueEntries, CountOfValueNames = CountOfValueNames,SettingsDataRAW = GetSettings())
 
 @app.route("/widget")
 def widget():
@@ -63,7 +63,6 @@ def settings():
 
 @app.route("/save_settings/<setting>")
 def SaveSettings():
-    #TODO Save Mechanism
     return "true"
 
 if __name__ == "__main__":
