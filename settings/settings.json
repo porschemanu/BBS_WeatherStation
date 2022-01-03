@@ -8,7 +8,7 @@
     "DiagramType": "cake" 
   },
   "Value3": {
-    "DataName": "Feuchtigkeit",
+    "DataName": "Luftfeuchte",
     "DiagramType": "cake" 
   }
 }

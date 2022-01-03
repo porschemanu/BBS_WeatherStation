@@ -14,17 +14,17 @@
 </head>
 
 <body>
-    <div id="main_header">
+    <div id="index_main_header">
         <img src="{{ url_for('static', filename='img/logo-header.png') }}" alt="">
-        <h1 id="title">Wetterstation</h1>
+        <h1>Wetterstation</h1>
         <p id="last_update">Test </p>
     </div>
 
-    <div id="content">
+    <div id="index_content">
     </div>
 
     <script>
-        document.getElementById("content").innerHTML =  index_builder({{ WeatherDataArray|tojson }}, {{ ListOfValueNames|tojson }}, {{ CountOfValueEntries|tojson }}, {{ CountOfValueNames|tojson }},'{{SettingsDataRAW | tojson}}')
+        document.getElementById("index_content").innerHTML =  index_builder({{ WeatherDataArray|tojson }}, {{ ListOfValueNames|tojson }}, {{ CountOfValueEntries|tojson }}, {{ CountOfValueNames|tojson }},'{{SettingsDataRAW | tojson}}')
     </script>
 </body>
 

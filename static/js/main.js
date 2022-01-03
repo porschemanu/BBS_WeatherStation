@@ -16,35 +16,51 @@ function index_builder(WeatherDataArray,ListOfValueNames,CountOfValueEntries,Cou
     >4 = 3 Rows. Filled from left to right
     */
 
-    output = '<table>'
+
 
     switch (CountOfValueNames){
         case 0:
             output += '<h1>Es konnten keine Werte ausgelesen werden!</h1>'
             break;
         case 1:
+            output = '<table class = "index_diagram_one">'
             output += '<tr><td>'+ get_diagram(ListOfValueNames[0],SettingsDataRAW) +'</td></tr>'
+            output += '</table>'
             break;
         case 2:
+            output = '<table class = "index_diagram_two">'
             output += '<tr><td>'+ get_diagram(ListOfValueNames[0],SettingsDataRAW) +'</td><td>'+ get_diagram(ListOfValueNames[1],SettingsDataRAW) +'</td></tr>'
+            output += '</table>'
             break;
         case 3:
+            output = '<table class = "index_diagram_three">'
             output += '<tr><td>'+ get_diagram(ListOfValueNames[0],SettingsDataRAW) +'</td><td>'+ get_diagram(ListOfValueNames[1],SettingsDataRAW) +'</td><td>'+ get_diagram(ListOfValueNames[2],SettingsDataRAW) +'</td></tr>'
+            output += '</table>'
             break;
         case 4:
+            output = '<table class = "index_diagram_four">'
             output += '<tr><td>'+ get_diagram(ListOfValueNames[0],SettingsDataRAW) +'</td><td>'+ get_diagram(ListOfValueNames[1],SettingsDataRAW) +'</td></tr>'
             output += '<tr><td>'+ get_diagram(ListOfValueNames[2],SettingsDataRAW) +'</td><td>'+ get_diagram(ListOfValueNames[3],SettingsDataRAW) +'</td></tr>'
+            output += '</table>'
             break;
         default:
             break;
     }
-    output += '</table>'
+
     return output
 }
 
 function get_diagram(ValueName,SettingsDataRaw){
-    console.log(LoadSettings(SettingsDataRaw))
 
+    var SettingsEntries = LoadSettings(SettingsDataRaw)
+    var tempArray = []
+
+    for (i in SettingsEntries){
+        tempArray.push(SettingsEntries[i].DataName)
+    }
+
+
+    console.log(tempArray.includes(ValueName))
     return ValueName
 }
 
