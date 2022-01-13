@@ -1,0 +1,56 @@
+#PYTHON#
+
+-METHODS
+    GetWeatherData():
+        text
+    
+    GetSettings():
+        text
+
+-VARIABLES
+    WeatherDataRAW:
+        text
+    ListOfValueNames:
+        text
+    ListOfChannelData:
+        text
+    ListOfValueEntries:
+        text
+    CountOfValueEntries:
+        text
+    CountOfValueNames:
+        text
+    DataEntry:
+        text
+    X/Y:
+        text
+    WeatherDataArray
+        text
+    TEMP
+        text
+
+#JAVASCRIPT#
+
+-Functions
+    index_builder():
+        text
+    widget_builder():
+        text
+    settings_builder():
+        text
+    FetchSettings():
+    
+
+#HTML#
+
+-DIV
+    main_header:
+        text
+    content:
+        text
+    
+
+#CSS#
+
+#JSON#
+

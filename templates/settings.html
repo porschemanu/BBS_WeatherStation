@@ -1,31 +1,31 @@
 <html>
-    <meta>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
-        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    </meta>
-    <head>
-        <Title>Settings</Title>
-        
-    </head>
+<meta>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</meta>
 
-    <body>
-        <div id="main_header">
-            <img src="{{ url_for('static', filename='img/logo-header.png') }}" alt="">
-            <h1 id="title">Wetterstation - Einstellungen</h1>
-            <p id="last_update">Test </p>
-            
-        </div>
-       
+<head>
+    <Title>Settings</Title>
 
-        <div id="content">
-            <button onclick="fTest()">Test</button>
-        </div>
+</head>
 
-        <script>
-            
-            
-        </script>
+<body>
+    <div id="main_header">
+        <img src="{{ url_for('static', filename='img/logo-header.png') }}" alt="">
+        <h1 id="title">Wetterstation - Einstellungen</h1>
+        <p id="last_update">Test </p>
+    </div>
 
-    </body>
+    <div id="content">
+
+    </div>
+
+    <script>
+        set_global({{ WeatherDataArray|tojson }}, {{ ListOfValueNames|tojson }}, {{ CountOfValueEntries|tojson }}, {{ CountOfValueNames|tojson }},'{{SettingsDataRAW | tojson}}');
+        document.getElementById("content").innerHTML = settings_build_mask();
+        //document.getElementById('content').innerHTML = settings_builder(LoadSettings(SettingsDataRAW))
+    </script>
+
+</body>
 
 </html>

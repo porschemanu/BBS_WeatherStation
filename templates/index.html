@@ -2,29 +2,28 @@
 
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-
-
-
-<meta>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
-</meta>
 
 <head>
     <title>BBS Wittlich Wettterstation - Vers. 0.1</title>
 </head>
 
 <body>
-    <div id="main_header">
+    <div id="index_main_header">
         <img src="{{ url_for('static', filename='img/logo-header.png') }}" alt="">
-        <h1 id="title">Wetterstation</h1>
+        <h1>Wetterstation</h1>
         <p id="last_update">Test </p>
     </div>
 
-    <div id="content">
+    <div id="index_content">
     </div>
 
     <script>
-        document.getElementById("content").innerHTML = content_builder({{ entries_number }}, {{ input_array|tojson }}, {{entries_title|tojson}});
+        //document.getElementById("index_content").innerHTML =  index_builder({{ WeatherDataArray|tojson }}, {{ ListOfValueNames|tojson }}, {{ CountOfValueEntries|tojson }}, {{ CountOfValueNames|tojson }},'{{SettingsDataRAW | tojson}}')
+        set_global({{ WeatherDataArray|tojson }}, {{ ListOfValueNames|tojson }}, {{ CountOfValueEntries|tojson }}, {{ CountOfValueNames|tojson }},'{{SettingsDataRAW | tojson}}');
+        document.getElementById("index_content").innerHTML = index_build_mask();
+        index_fill_mask();
+       
     </script>
 </body>
 
