@@ -1,0 +1,14 @@
+{
+  "Value1": {
+    "DataName": "Temperatur",
+    "DiagramType": "text"
+  },
+  "Value2": {
+    "DataName": "Luftdruck",
+    "DiagramType": "pie"
+  },
+  "Value3": {
+    "DataName": "Luftfeuchte",
+    "DiagramType": "pie"
+  }
+}

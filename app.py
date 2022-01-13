@@ -68,13 +68,15 @@ def SaveSettings(setting):
     del ParameterList[-1]
 
     data = {}
-    data['Settings'] = []
+    i = 0
+    while i < len(ParameterList):
+        tempstring = f'Value{i+1}'
+        data[tempstring] = []
+        temp = ParameterList[i].split(':')
+        data[tempstring].append({"DataName" : temp[0], "DiagramType" : temp[1]})
+        i = i + 1
 
-    for SettingsEntry in ParameterList:
-        temp = SettingsEntry.split(':')
-        data['Settings'].append({temp[0] : temp[1]})
-
-    with open('settings/test_settings.json', 'w') as outfile:
+    with open('settings/settings.json', 'w') as outfile:
         json.dump(data, outfile)
 
     return "true"

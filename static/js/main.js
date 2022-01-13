@@ -19,7 +19,8 @@ function load_settings(SettingsDataRaw){
     output = []
 
     for(var i in SettingsDataRAW_parsed)
-        output.push(SettingsDataRAW_parsed[i])
+
+        output.push(SettingsDataRAW_parsed[i][0])
     return output;
 }
 
