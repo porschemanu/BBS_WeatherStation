@@ -129,6 +129,10 @@
 
 }
 
-/*tv*/
+/*settings*/
+
+#settings_table table tr td{
+  border: 1px solid black;
+}
 
 /*widget*/

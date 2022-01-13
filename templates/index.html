@@ -2,12 +2,7 @@
 
 <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-
-
-
-<meta>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
-</meta>
 
 <head>
     <title>BBS Wittlich Wettterstation - Vers. 0.1</title>
@@ -24,7 +19,11 @@
     </div>
 
     <script>
-        document.getElementById("index_content").innerHTML =  index_builder({{ WeatherDataArray|tojson }}, {{ ListOfValueNames|tojson }}, {{ CountOfValueEntries|tojson }}, {{ CountOfValueNames|tojson }},'{{SettingsDataRAW | tojson}}')
+        //document.getElementById("index_content").innerHTML =  index_builder({{ WeatherDataArray|tojson }}, {{ ListOfValueNames|tojson }}, {{ CountOfValueEntries|tojson }}, {{ CountOfValueNames|tojson }},'{{SettingsDataRAW | tojson}}')
+        set_global({{ WeatherDataArray|tojson }}, {{ ListOfValueNames|tojson }}, {{ CountOfValueEntries|tojson }}, {{ CountOfValueNames|tojson }},'{{SettingsDataRAW | tojson}}');
+        document.getElementById("index_content").innerHTML = index_build_mask();
+        index_fill_mask();
+       
     </script>
 </body>
 

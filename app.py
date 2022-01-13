@@ -59,10 +59,24 @@ def widget():
 
 @app.route("/settings")
 def settings():
-    return render_template("settings.html", SettingsDataRAW = GetSettings() )
+    WeatherDataArray, ListOfValueNames, CountOfValueEntries, CountOfValueNames = GetWeatherData()
+    return render_template("settings.html",WeatherDataArray = WeatherDataArray, ListOfValueNames = ListOfValueNames, CountOfValueEntries = CountOfValueEntries, CountOfValueNames = CountOfValueNames,SettingsDataRAW = GetSettings())
 
 @app.route("/save_settings/<setting>")
-def SaveSettings():
+def SaveSettings(setting):
+    ParameterList = setting.split(";")
+    del ParameterList[-1]
+
+    data = {}
+    data['Settings'] = []
+
+    for SettingsEntry in ParameterList:
+        temp = SettingsEntry.split(':')
+        data['Settings'].append({temp[0] : temp[1]})
+
+    with open('settings/test_settings.json', 'w') as outfile:
+        json.dump(data, outfile)
+
     return "true"
 
 if __name__ == "__main__":
