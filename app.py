@@ -2,46 +2,9 @@ from flask import Flask, redirect, url_for, render_template
 import json
 app = Flask(__name__)
 
-#Data Fetching Functions
 def GetWeatherData():
     WeatherDataRAW = json.load(open('data/test.json'))
-
-    ListOfChannelData = WeatherDataRAW['channel']
-    ListOfValueEntries = WeatherDataRAW['feeds']
-    ListOfValueNames = []
-    ListOfValueNames.clear()
-
-    #Getting the Name of the Values from the Channel
-    for DataEntry in ListOfChannelData:
-        if "field" in DataEntry:
-            ListOfValueNames.append(ListOfChannelData[DataEntry])
-
-    CountOfValueNames = len(ListOfValueNames) + 1
-    CountOfValueEntries = len(ListOfValueEntries)
-
-    #Building the Structure of the Array
-    WeatherDataArray = [[0 for x in range(CountOfValueNames)]
-                        for x in range(CountOfValueEntries)]
-
-    #Initialising the needed Values
-    _temp = ''
-    x = 0
-    y = 0
-
-    #Filling the Array with Data
-    while x < CountOfValueEntries:
-        DataEntry = ListOfValueEntries[x]
-        y = 0
-        while y < CountOfValueNames:
-            if y == 0:
-                WeatherDataArray[x][0] = DataEntry['created_at']
-            elif y < 4:
-                _temp = 'field' + str(y)
-                WeatherDataArray[x][y] = DataEntry[_temp]
-            y += 1
-        x += 1
-
-    return WeatherDataArray, ListOfValueNames, CountOfValueEntries, CountOfValueNames - 1
+    return WeatherDataRAW;
 
 def GetSettings():
     SettingsDataRAW = json.load(open('settings/settings.json'))
@@ -50,8 +13,7 @@ def GetSettings():
 #Renderer render_template("index.html"
 @app.route("/")
 def index():
-    WeatherDataArray, ListOfValueNames, CountOfValueEntries, CountOfValueNames = GetWeatherData()
-    return render_template("index.html",WeatherDataArray = WeatherDataArray, ListOfValueNames = ListOfValueNames, CountOfValueEntries = CountOfValueEntries, CountOfValueNames = CountOfValueNames,SettingsDataRAW = GetSettings())
+    return render_template("index.html",SettingsDataRAW = GetSettings(),WeatherData = GetWeatherData())
 
 @app.route("/widget")
 def widget():
@@ -59,8 +21,7 @@ def widget():
 
 @app.route("/settings")
 def settings():
-    WeatherDataArray, ListOfValueNames, CountOfValueEntries, CountOfValueNames = GetWeatherData()
-    return render_template("settings.html",WeatherDataArray = WeatherDataArray, ListOfValueNames = ListOfValueNames, CountOfValueEntries = CountOfValueEntries, CountOfValueNames = CountOfValueNames,SettingsDataRAW = GetSettings())
+    return render_template("settings.html",SettingsDataRAW = GetSettings(),WeatherData = GetWeatherData())
 
 @app.route("/save_settings/<setting>")
 def SaveSettings(setting):

@@ -1,17 +1,29 @@
-let WeatherDataArray;
-let ListOfValueNames;
-let CountOfValueEntries;
-let CountOfValueNames;
+let WeatherDataArray = new  Array();
+let ListOfValueNames = new Array();
 let SettingsData;
 
+
 //GLOBAL FUNCTIONS
-function set_global(iWeatherDataArray,iListOfValueNames,iCountOfValueEntries,iCountOfValueNames,iSettingsDataRAW){
-    WeatherDataArray = iWeatherDataArray;
-    ListOfValueNames = iListOfValueNames;
-    CountOfValueEntries = iCountOfValueEntries;
-    CountOfValueNames = iCountOfValueNames;
+function set_global(iSettingsDataRAW, iWeatherData){
     SettingsData = load_settings(iSettingsDataRAW);
+    parse_weatherdata(iWeatherData);
     console.log('Values Import Successful')
+}
+
+function parse_weatherdata(WeatherData){
+    for (i in Object.keys(WeatherData['channel'])){
+        if(Object.keys(WeatherData['channel'])[i].includes('field')){
+            ListOfValueNames.push(Object.values(WeatherData['channel'])[i]);
+        }
+    }
+
+    for(i in WeatherData['feeds']){
+        WeatherDataArray.push(Object.values(WeatherData['feeds'][i]))
+        }
+
+    for (i in WeatherDataArray){
+        WeatherDataArray[i].splice(1,1)
+    }
 }
 
 function load_settings(SettingsDataRaw){
@@ -19,13 +31,20 @@ function load_settings(SettingsDataRaw){
     output = []
 
     for(var i in SettingsDataRAW_parsed)
-
         output.push(SettingsDataRAW_parsed[i][0])
     return output;
 }
 
 function save_settings(){
-    var SettingsArray = fetch_settings()
+    let webpath = ''
+    let i = 0
+    for(i in SettingsData){
+        webpath += SettingsData[i].DataName+ ':' +document.getElementById('select_' + SettingsData[i].DataName).value + ';'
+    }
+    
+    fetch('http://127.0.0.1:5000/save_settings/' + webpath)
+    //.then(response => response.text())
+    //if (response.text() == "true"){alert("HalloWelt")}
 }
 
 //INDEX FUNCTIONS
@@ -35,7 +54,7 @@ function index_build_mask() {
 Build the mask with the needed canvases.
  */
     Mask = ''
-    switch (CountOfValueNames) {
+    switch (ListOfValueNames.length) {
         case 0:
             Mask += '<h1>Es konnten keine Werte ausgelesen werden!</h1>'
             break;
@@ -58,7 +77,7 @@ function index_build_cell(){
 * */
     var Cells = ''
     i = 0
-    while( i < CountOfValueNames ){
+    while( i < ListOfValueNames.length ){
         Cells += '<td><h1>' + ListOfValueNames[i] + '</h1><div id="'+ ListOfValueNames[i] +'"><canvas id="diagram_'+ ListOfValueNames[i] +'" style="width:100%;max-width:700px"></canvas></div>'
         i++;
     }
@@ -85,7 +104,7 @@ if(SettingsData[i].DataName == ValueName){
         }
 
         if(ValueSettings == ''){
-            return "FUCK"
+            alert("FUCK")
         }
 
         switch (ValueSettings){
@@ -137,21 +156,6 @@ function settings_options_diagramchoice(DataName){
     choice += '</select>'
 
     return choice
-}
-
-function fetch_settings(){
-    SettingsArray = [];
-    webpath = ''
-    i = 0
-    for(i in SettingsData){
-        webpath += SettingsData[i].DataName+ ':' +document.getElementById('select_' + SettingsData[i].DataName).value + ';'
-        SettingsArray.push()
-    }
-    var stream =
-
-    fetch('http://127.0.0.1:5000/save_settings/' + webpath)
-    //.then(response => response.text())
-    //if (response.text() == "true"){alert("HalloWelt")}
 }
 
 //DIAGRAM FUNCTIONS

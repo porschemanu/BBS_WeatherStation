@@ -19,8 +19,7 @@
     </div>
 
     <script>
-        //document.getElementById("index_content").innerHTML =  index_builder({{ WeatherDataArray|tojson }}, {{ ListOfValueNames|tojson }}, {{ CountOfValueEntries|tojson }}, {{ CountOfValueNames|tojson }},'{{SettingsDataRAW | tojson}}')
-        set_global({{ WeatherDataArray|tojson }}, {{ ListOfValueNames|tojson }}, {{ CountOfValueEntries|tojson }}, {{ CountOfValueNames|tojson }},'{{SettingsDataRAW | tojson}}');
+        set_global('{{SettingsDataRAW | tojson}}',{{WeatherData|tojson}});
         document.getElementById("index_content").innerHTML = index_build_mask();
         index_fill_mask();
        

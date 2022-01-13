@@ -21,9 +21,8 @@
     </div>
 
     <script>
-        set_global({{ WeatherDataArray|tojson }}, {{ ListOfValueNames|tojson }}, {{ CountOfValueEntries|tojson }}, {{ CountOfValueNames|tojson }},'{{SettingsDataRAW | tojson}}');
+        set_global('{{SettingsDataRAW | tojson}}',{{WeatherData|tojson}});
         document.getElementById("content").innerHTML = settings_build_mask();
-        //document.getElementById('content').innerHTML = settings_builder(LoadSettings(SettingsDataRAW))
     </script>
 
 </body>
