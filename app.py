@@ -1,9 +1,14 @@
 from flask import Flask, redirect, url_for, render_template
-import json
+import urllib.request, json
+import requests
 app = Flask(__name__)
 
 def GetWeatherData():
-    WeatherDataRAW = json.load(open('data/test.json'))
+    url = requests.get("https://thingspeak.com/channels/1593764/feed.json")
+    WeatherDataRAW = json.loads(url.text)
+
+    #WeatherDataRAW = json.load(open('data/test.json'))
+
     return WeatherDataRAW;
 
 def GetSettings():
