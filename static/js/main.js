@@ -255,6 +255,8 @@ function DiagramBar(Value, Target){
 
 }
 
+/* Hallo Welt */
+
 function DiagramText(Value, Target){
     document.getElementById(Target).innerHTML = '<h1>'+Value +'</h1>'
 }
