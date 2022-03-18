@@ -1,7 +1,0 @@
-C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\TestProject\TestProject\bin\Release\net6.0\publish\TestProject.exe
-C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\TestProject\TestProject\bin\Release\net6.0\publish\appsettings.Development.json
-C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\TestProject\TestProject\bin\Release\net6.0\publish\appsettings.json
-C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\TestProject\TestProject\bin\Release\net6.0\publish\TestProject.dll
-C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\TestProject\TestProject\bin\Release\net6.0\publish\TestProject.deps.json
-C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\TestProject\TestProject\bin\Release\net6.0\publish\TestProject.runtimeconfig.json
-C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\TestProject\TestProject\bin\Release\net6.0\publish\TestProject.pdb

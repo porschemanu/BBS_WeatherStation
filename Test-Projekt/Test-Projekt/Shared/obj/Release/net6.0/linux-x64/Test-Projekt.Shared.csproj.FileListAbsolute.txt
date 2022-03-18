@@ -1,0 +1,12 @@
+C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Shared\bin\Release\net6.0\linux-x64\Test-Projekt.Shared.deps.json
+C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Shared\bin\Release\net6.0\linux-x64\Test-Projekt.Shared.dll
+C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Shared\bin\Release\net6.0\linux-x64\Test-Projekt.Shared.pdb
+C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Shared\obj\Release\net6.0\linux-x64\Test-Projekt.Shared.csproj.AssemblyReference.cache
+C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Shared\obj\Release\net6.0\linux-x64\Test-Projekt.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Shared\obj\Release\net6.0\linux-x64\Test-Projekt.Shared.AssemblyInfoInputs.cache
+C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Shared\obj\Release\net6.0\linux-x64\Test-Projekt.Shared.AssemblyInfo.cs
+C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Shared\obj\Release\net6.0\linux-x64\Test-Projekt.Shared.csproj.CoreCompileInputs.cache
+C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Shared\obj\Release\net6.0\linux-x64\Test-Projekt.Shared.dll
+C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Shared\obj\Release\net6.0\linux-x64\refint\Test-Projekt.Shared.dll
+C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Shared\obj\Release\net6.0\linux-x64\Test-Projekt.Shared.pdb
+C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Shared\obj\Release\net6.0\linux-x64\ref\Test-Projekt.Shared.dll
