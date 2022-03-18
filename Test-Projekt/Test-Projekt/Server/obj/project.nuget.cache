@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/+rm2nBPaVkC9AJ6UGZTPOvQ5AS2rPUaFRhH3PBm5FJrepp2qZd7CiX2fZ9MmfCfBLQTKefqHhEnBFpt1ewhJA==",
+  "dgSpecHash": "GvTZQ8u8KydBf+o/Xe6NfMEcys7Aiy6bQv183uY/Ok6bcjalXbW8/y9oXu9IRzQShJ90PkW0i43L1WdbeeufgA==",
   "success": true,
   "projectFilePath": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Test-Projekt\\Test-Projekt\\Server\\Test-Projekt.Server.csproj",
   "expectedPackageFiles": [
@@ -32,10 +32,7 @@
     "C:\\Users\\manue\\.nuget\\packages\\system.io.pipelines\\6.0.2\\system.io.pipelines.6.0.2.nupkg.sha512",
     "C:\\Users\\manue\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\manue\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\manue\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
-    "C:\\Users\\manue\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\6.0.3\\microsoft.netcore.app.runtime.linux-x64.6.0.3.nupkg.sha512",
-    "C:\\Users\\manue\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\6.0.3\\microsoft.aspnetcore.app.runtime.linux-x64.6.0.3.nupkg.sha512",
-    "C:\\Users\\manue\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\6.0.3\\microsoft.netcore.app.host.linux-x64.6.0.3.nupkg.sha512"
+    "C:\\Users\\manue\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
