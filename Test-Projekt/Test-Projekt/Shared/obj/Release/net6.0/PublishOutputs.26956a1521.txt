@@ -1,3 +1,0 @@
-C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Shared\bin\Release\net6.0\publish\Test-Projekt.Shared.dll
-C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Shared\bin\Release\net6.0\publish\Test-Projekt.Shared.deps.json
-C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Shared\bin\Release\net6.0\publish\Test-Projekt.Shared.pdb

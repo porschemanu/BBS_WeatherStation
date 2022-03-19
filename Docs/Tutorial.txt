@@ -78,3 +78,15 @@ sudo reboot
 
 
 CREATE TABLE `BBS_Wetterstation`.`MQTT` ( `id` INT NOT NULL AUTO_INCREMENT , `Topic` VARCHAR(255) NOT NULL , `Payload` DOUBLE NOT NULL , `Timestamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+
+GIT
+sudo apt install git
+mkdir Github
+cd Github/
+git clone https://github.com/PorscheManu/BBS_WeatherStation.git
+
+curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel Current
+
+
+git fetch -> Aktualisierung ziehen

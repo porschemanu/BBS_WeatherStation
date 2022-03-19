@@ -1,1 +1,0 @@
-C:\Users\manue\Documents\GitHub\BBS_WeatherStation\Test-Projekt\Test-Projekt\Client\bin\Release\net6.0\publish\web.config
