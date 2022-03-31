@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QM0CTUrQG81rDIl0YVva73o2ZYnHX3eEhaz+zexMOUowrAjQ4t3ZpWmoEtxxXJvcNEFpsWrs2bHycyf16NOPag==",
+  "dgSpecHash": "kgPrGxx6TAqy5vTfA2xyFqg8XGxvVSOocC++2OyYdRIyAXqAbJVB3FyiY6gCq7pD3C0SInjsu3fhNgqlBWTlCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Weatherstation\\WeatherstationLib\\WeatherstationLib.csproj",
+  "projectFilePath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Weatherstation\\WeatherstationLib\\Weatherstation.Data.Lib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\manue\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\manue\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",

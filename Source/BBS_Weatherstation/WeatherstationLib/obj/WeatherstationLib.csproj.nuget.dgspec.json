@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Weatherstation\\WeatherstationLib\\WeatherstationLib.csproj": {}
+    "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Weatherstation\\WeatherstationLib\\WeatherstationLib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Weatherstation\\WeatherstationLib\\WeatherstationLib.csproj": {
+    "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Weatherstation\\WeatherstationLib\\WeatherstationLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Weatherstation\\WeatherstationLib\\WeatherstationLib.csproj",
+        "projectUniqueName": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Weatherstation\\WeatherstationLib\\WeatherstationLib.csproj",
         "projectName": "WeatherstationLib",
-        "projectPath": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Weatherstation\\WeatherstationLib\\WeatherstationLib.csproj",
+        "projectPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Weatherstation\\WeatherstationLib\\WeatherstationLib.csproj",
         "packagesPath": "C:\\Users\\manue\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Weatherstation\\WeatherstationLib\\obj\\",
+        "outputPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Weatherstation\\WeatherstationLib\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\manue\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -64,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

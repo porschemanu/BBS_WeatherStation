@@ -1,0 +1,15 @@
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\WeatherstationLib\bin\Debug\net6.0\Weatherstation.Data.Lib.deps.json
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\WeatherstationLib\bin\Debug\net6.0\Weatherstation.Data.Lib.dll
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\WeatherstationLib\bin\Debug\net6.0\Weatherstation.Data.Lib.pdb
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\WeatherstationLib\obj\Debug\net6.0\Weatherstation.Data.Lib.csproj.AssemblyReference.cache
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\WeatherstationLib\obj\Debug\net6.0\Weatherstation.Data.Lib.GeneratedMSBuildEditorConfig.editorconfig
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\WeatherstationLib\obj\Debug\net6.0\Weatherstation.Data.Lib.AssemblyInfoInputs.cache
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\WeatherstationLib\obj\Debug\net6.0\Weatherstation.Data.Lib.AssemblyInfo.cs
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\WeatherstationLib\obj\Debug\net6.0\Weatherstation.Data.Lib.csproj.CoreCompileInputs.cache
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\WeatherstationLib\obj\Debug\net6.0\Weatherstation.Data.Lib.dll
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\WeatherstationLib\obj\Debug\net6.0\refint\Weatherstation.Data.Lib.dll
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\WeatherstationLib\obj\Debug\net6.0\Weatherstation.Data.Lib.pdb
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\WeatherstationLib\obj\Debug\net6.0\ref\Weatherstation.Data.Lib.dll
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\WeatherstationLib\bin\Debug\net6.0\Weatherstation.Data.dll
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\WeatherstationLib\bin\Debug\net6.0\Weatherstation.Data.pdb
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\WeatherstationLib\obj\Debug\net6.0\Weatherstation.Data.Lib.csproj.CopyComplete

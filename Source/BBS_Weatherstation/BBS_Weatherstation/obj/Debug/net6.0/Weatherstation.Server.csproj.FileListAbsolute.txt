@@ -1,0 +1,8 @@
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\BBS_Weatherstation\obj\Debug\net6.0\Weatherstation.Server.csproj.AssemblyReference.cache
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\BBS_Weatherstation\obj\Debug\net6.0\Weatherstation.Server.GeneratedMSBuildEditorConfig.editorconfig
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\BBS_Weatherstation\obj\Debug\net6.0\Weatherstation.Server.AssemblyInfoInputs.cache
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\BBS_Weatherstation\obj\Debug\net6.0\Weatherstation.Server.AssemblyInfo.cs
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\BBS_Weatherstation\obj\Debug\net6.0\Weatherstation.Server.csproj.CoreCompileInputs.cache
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\BBS_Weatherstation\obj\Debug\net6.0\Weatherstation.Server.MvcApplicationPartsAssemblyInfo.cache
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\BBS_Weatherstation\obj\Debug\net6.0\Weatherstation.Server.RazorAssemblyInfo.cache
+X:\GitHub\BBS_WeatherStation\Source\BBS_Weatherstation\BBS_Weatherstation\obj\Debug\net6.0\Weatherstation.Server.RazorAssemblyInfo.cs
