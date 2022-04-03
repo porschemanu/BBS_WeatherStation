@@ -1,0 +1,33 @@
+﻿@page "/"
+
+@using System.Globalization
+@using Radzen
+@using Radzen.Blazor
+@using Weatherstation.Data;
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+
+<h1>Radzen Blazor Chart with line series</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 my-5">
+                <RadzenChart>
+                    <RadzenLineSeries Data="@weatherData" CategoryProperty="timestamp" Title="2022" LineType="LineType.Dashed" ValueProperty="value">
+                        <RadzenMarkers MarkerType="MarkerType.Square" />
+                    </RadzenLineSeries>
+                    <RadzenCategoryAxis Padding="20" FormatString="{0:dd}" />
+                </RadzenChart>
+            </div>
+        </div>
+    </div>
+
+@code {
+    //TODO: Uncheck Autoupdate    
+    }

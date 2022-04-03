@@ -1,0 +1,12 @@
+X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.UI\bin\Debug\net6.0\BBS_Wittlich.Weatherstation.UI.deps.json
+X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.UI\bin\Debug\net6.0\BBS_Wittlich.Weatherstation.UI.dll
+X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.UI\bin\Debug\net6.0\BBS_Wittlich.Weatherstation.UI.pdb
+X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.UI\obj\Debug\net6.0\BBS_Wittlich.Weatherstation.UI.csproj.AssemblyReference.cache
+X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.UI\obj\Debug\net6.0\BBS_Wittlich.Weatherstation.UI.GeneratedMSBuildEditorConfig.editorconfig
+X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.UI\obj\Debug\net6.0\BBS_Wittlich.Weatherstation.UI.AssemblyInfoInputs.cache
+X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.UI\obj\Debug\net6.0\BBS_Wittlich.Weatherstation.UI.AssemblyInfo.cs
+X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.UI\obj\Debug\net6.0\BBS_Wittlich.Weatherstation.UI.csproj.CoreCompileInputs.cache
+X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.UI\obj\Debug\net6.0\BBS_Wittlich.Weatherstation.UI.dll
+X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.UI\obj\Debug\net6.0\refint\BBS_Wittlich.Weatherstation.UI.dll
+X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.UI\obj\Debug\net6.0\BBS_Wittlich.Weatherstation.UI.pdb
+X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.UI\obj\Debug\net6.0\ref\BBS_Wittlich.Weatherstation.UI.dll

@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Radzen.Blazor" Version="3.17.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BBS_Wittlich.Weatherstation.Data.Repositories\BBS_Wittlich.Weatherstation.Data.csproj" />
+    <ProjectReference Include="..\BBS_Wittlich.Weatherstation.UI\BBS_Wittlich.Weatherstation.UI.csproj" />
+  </ItemGroup>
+
+</Project>
