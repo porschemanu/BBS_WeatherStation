@@ -10,11 +10,13 @@ namespace BBS_Wittlich.Weatherstation.Data.Repositories
 {
     public class SQLClientRepo : Data.Interfaces.IRepositories
     {
+        //private readonly MySqlConnection _connection = @"server=192.168.0.10;userid=WebServer;password=Wittlich;database=BBS_Wetterstation";
+
         public WeatherEntry[] GetAllWeatherEntries(string topic)
         {
             string cs = @"server=192.168.0.10;userid=WebServer;password=Wittlich;database=BBS_Wetterstation";
             using var con = new MySqlConnection(cs);
-            string sql = $"SELECT * FROM MQTT WHERE Topic = '{topic}' ORDER BY id DESC LIMIT 100";
+            string sql = $"SELECT * FROM MQTT WHERE Topic = '{topic}' ORDER BY id DESC LIMIT 10";
             MySqlCommand cmd = new MySqlCommand(sql, con);
             List<WeatherEntry> weatherEntries = new();
 
@@ -47,5 +49,6 @@ namespace BBS_Wittlich.Weatherstation.Data.Repositories
         {
             throw new NotImplementedException();
         }
+
     }
 }

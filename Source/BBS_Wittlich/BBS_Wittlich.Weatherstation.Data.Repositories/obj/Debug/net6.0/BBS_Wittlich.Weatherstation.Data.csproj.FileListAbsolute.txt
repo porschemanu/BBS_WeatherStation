@@ -10,3 +10,5 @@ X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.Dat
 X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.Data.Repositories\obj\Debug\net6.0\refint\BBS_Wittlich.Weatherstation.Data.dll
 X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.Data.Repositories\obj\Debug\net6.0\BBS_Wittlich.Weatherstation.Data.pdb
 X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.Data.Repositories\obj\Debug\net6.0\ref\BBS_Wittlich.Weatherstation.Data.dll
+X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.Data.Repositories\bin\Debug\net6.0\BBS_Wittlich.Weatherstation.Data.runtimeconfig.json
+X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.Data.Repositories\obj\Debug\net6.0\BBS_Wittlich.Weatherstation.Data.genruntimeconfig.cache

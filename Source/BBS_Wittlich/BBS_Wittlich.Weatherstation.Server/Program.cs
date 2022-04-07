@@ -1,4 +1,4 @@
-using BBS_Wittlich.Weatherstation.Server.Data;
+using BBS_Wittlich.Weatherstation.Server;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddSingleton<WeatherForecastService>();
+
 
 var app = builder.Build();
 
@@ -28,4 +28,18 @@ app.UseRouting();
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
+//Task.Run(() => Test());
+
+
+
 app.Run();
+
+
+
+async void Test()
+{
+    // Use for Cleanup
+    Console.WriteLine("Server's running");
+    await Task.Delay(1000);
+    Test();
+}

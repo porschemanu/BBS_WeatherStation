@@ -36,7 +36,6 @@ X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.Ser
 X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.Server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.Server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.Server\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
-X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.Server\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.Server\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.Server\bin\Debug\net6.0\MySql.Data.dll
 X:\GitHub\BBS_WeatherStation\Source\BBS_Wittlich\BBS_Wittlich.Weatherstation.Server\bin\Debug\net6.0\Ubiety.Dns.Core.dll

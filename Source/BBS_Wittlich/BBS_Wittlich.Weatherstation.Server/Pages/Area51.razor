@@ -1,0 +1,56 @@
+﻿@page "/area51"
+<h3>Area51</h3>
+<PageTitle>Area51</PageTitle>
+
+<label>Current Settings</label>
+
+<div>
+    <div>
+         <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">localhost</button>
+            <button type="button" class="btn btn-secondary">Raspberry</button>
+        </div>
+        <hr />
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">SQLClient</button>
+            <button type="button" class="btn btn-secondary">EFCore</button>
+        </div>
+        <hr />
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Heute</button>
+            <button type="button" class="btn btn-secondary">Gestern</button>
+            <button type="button" class="btn btn-secondary">7 Tage</button>
+            <button type="button" class="btn btn-secondary">30 Tage</button>
+            <button type="button" class="btn btn-secondary">Alle</button>
+        </div>
+        <hr />
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <label>Test1</label><label>Test2</label><label>Test3</label>
+        </div>
+    </div>
+   <hr />
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 my-5">
+                <RadzenChart>
+                    <RadzenLineSeries Data="@weatherData" CategoryProperty="timestamp" Title="2022" LineType="LineType.Dashed" ValueProperty="value">
+                        <RadzenMarkers MarkerType="MarkerType.Square" />
+                    </RadzenLineSeries>
+                    <RadzenCategoryAxis Padding="20" FormatString="{0:mm:}" />
+                </RadzenChart>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    /*
+     * Formatting 
+     * 1 Day: 
+     * 7 Days:
+     * 30 Days:
+     * All Days:  Just the Date: 
+     * 
+     * 
+     */
+}
