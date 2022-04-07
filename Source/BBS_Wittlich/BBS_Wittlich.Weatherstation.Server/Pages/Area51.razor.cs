@@ -2,21 +2,21 @@
 {
     public partial class Area51
     {
-        Weatherstation.Data.Models.WeatherEntry[] weatherData;
-
+       
+        
         protected override async Task OnInitializedAsync()
         {
-            Task.Run(() => DataFetcher());
+            
+            //await Task.Run(() => DataFetcher(query));
         }
 
-        private async void DataFetcher()
-        {
-            Console.WriteLine("Fetching Weather Data");
-            Weatherstation.Data.Repositories.SQLClientRepo dataRepo = new();
-            weatherData = dataRepo.GetAllWeatherEntries("temp");
-            Array. weatherData[5]
-            await Task.Delay(10000);
-            DataFetcher();
+        private async Task DataFetcher(Data.Query query)
+        {   
+            Data.QueryManager queryManager = new Data.QueryManager();
+            Console.WriteLine($"Fetching Weather Data {query.Source} {query.UnitOfWork} {query.Timespan}");
+            Data.Respone respone = queryManager.QueryAdministration(query);
+            weatherData = respone.Result;
+            Console.WriteLine($"Finished Fetching Weather Data: {weatherData.Length}");
         }
 
     }

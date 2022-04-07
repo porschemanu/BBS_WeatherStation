@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BBS_Wittlich.Weatherstation.Data.Repositories\BBS_Wittlich.Weatherstation.Data.csproj" />
-    <ProjectReference Include="..\BBS_Wittlich.Weatherstation.UI\BBS_Wittlich.Weatherstation.UI.csproj" />
   </ItemGroup>
 
 </Project>

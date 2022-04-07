@@ -8,19 +8,25 @@ using MySql.Data.MySqlClient;
 
 namespace BBS_Wittlich.Weatherstation.Data.Repositories
 {
-    public class SQLClientRepo : Data.Interfaces.IRepositories
+    public class SQLClientRepo : Interfaces.IRepositories
     {
-        //private readonly MySqlConnection _connection = @"server=192.168.0.10;userid=WebServer;password=Wittlich;database=BBS_Wetterstation";
+        public string Source { get; set; }
 
-        public WeatherEntry[] GetAllWeatherEntries(string topic)
+        private MySqlConnection ConnectionBuilder()
         {
-            string cs = @"server=192.168.0.10;userid=WebServer;password=Wittlich;database=BBS_Wetterstation";
-            using var con = new MySqlConnection(cs);
-            string sql = $"SELECT * FROM MQTT WHERE Topic = '{topic}' ORDER BY id DESC LIMIT 10";
-            MySqlCommand cmd = new MySqlCommand(sql, con);
+            MySqlConnection sqlConnection = new MySqlConnection($"server={Source};userid=WebServer;password=Wittlich;database=BBS_Wetterstation");
+            return sqlConnection;
+        }
+
+        private WeatherEntry[] SQLReader(string statement)
+        {
+            MySqlConnection mySqlConnection = ConnectionBuilder();
+
+            MySqlCommand cmd = new MySqlCommand(statement, mySqlConnection);
+
             List<WeatherEntry> weatherEntries = new();
 
-            con.Open();
+            mySqlConnection.Open();
             using MySqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
@@ -30,25 +36,39 @@ namespace BBS_Wittlich.Weatherstation.Data.Repositories
                 weatherEntry.timestamp = rdr.GetDateTime(3);
                 weatherEntries.Add(weatherEntry);
             }
-            con.Close();
+
+            mySqlConnection.Close();
 
             return weatherEntries.ToArray();
         }
 
-        public WeatherEntry GetLastWeatherEntry(string topic)
-        {
-            throw new NotImplementedException();
+        public WeatherEntry[] Get()
+        {   
+            string statement = $"SELECT * FROM MQTT WHERE id mod 1000 = 0 ORDER BY id DESC";
+
+            return SQLReader(statement);
+          
         }
 
-        public List<WeatherEntry> GetWeatherStats(string topic)
+        public WeatherEntry[] Get(string topic)
         {
-            throw new NotImplementedException();
+            string statement = $"SELECT * FROM MQTT WHERE id mod 100 = 0 AND Topic = '{topic}' ORDER BY id DESC";
+
+            return SQLReader(statement);
         }
 
-        public List<WeatherEntry> GetWeatherTimespan(string topic)
+        public WeatherEntry[] Get(string topic, DateTime date)
         {
-            throw new NotImplementedException();
+            string statement = $"SELECT * FROM `MQTT` WHERE Topic = 'temp' AND Timestamp between '{date}' and '{date}'";
+
+            return SQLReader(statement);
         }
 
+        public WeatherEntry[] Get(string topic, DateTime startDate, DateTime endDate)
+        {
+            string statement = $"SELECT * FROM `MQTT` WHERE Topic = 'temp' AND Timestamp between '{startDate}' and '{endDate}'";
+
+            return SQLReader(statement);
+        }
     }
 }

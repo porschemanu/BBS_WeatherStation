@@ -6,27 +6,38 @@
 
 <div>
     <div>
-         <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary">localhost</button>
-            <button type="button" class="btn btn-secondary">Raspberry</button>
-        </div>
+
+        <select @bind="query.Source" class="form-select" aria-label="Default select example">
+            <option value="localhost">Localhost</option>
+            <option value="192.168.0.10">MY - Raspberry</option>
+        </select>
+
         <hr />
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary">SQLClient</button>
-            <button type="button" class="btn btn-secondary">EFCore</button>
-        </div>
+
+        <select @bind="query.UnitOfWork" class="form-select" aria-label="Default select example">
+            <option value="sqlclient">SQLClient</option>
+            <option value="efcore">EFCore</option>
+            <option value="localstorage">LocalStorage</option>
+        </select>
+
         <hr />
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary">Heute</button>
-            <button type="button" class="btn btn-secondary">Gestern</button>
-            <button type="button" class="btn btn-secondary">7 Tage</button>
-            <button type="button" class="btn btn-secondary">30 Tage</button>
-            <button type="button" class="btn btn-secondary">Alle</button>
-        </div>
+
+        <select @bind="query.Topic" class="form-select" aria-label="Default select example">
+            <option value="temp">Temperatur</option>
+            <option value="humidity">Luftfeuchtigkeit</option>
+            <option value="pressure">Luftdruck</option>
+        </select>
+
         <hr />
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <label>Test1</label><label>Test2</label><label>Test3</label>
-        </div>
+
+        <select @bind="query.Timespan" class="form-select" aria-label="Default select example">
+            <option value="today">Heute</option>
+            <option value="yesterday">Gestern</option>
+            <option value="week">1 Woche</option>
+            <option value="month">1 Monat</option>
+            <option value="year">1 Jahr</option>
+            <option value="all">Alle</option>
+        </select>
     </div>
    <hr />
     <div class="container">
@@ -42,14 +53,23 @@
         </div>
     </div>
 </div>
-
 @code {
-    /*
+    private BBS_Wittlich.Weatherstation.Data.Query query = new();
+     Weatherstation.Data.Models.WeatherEntry[] weatherData;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+
+        DataFetcher(query);
+    }
+    
+     /*
      * Formatting 
      * 1 Day: 
      * 7 Days:
      * 30 Days:
-     * All Days:  Just the Date: 
+     * All Days:  Just the Date 
      * 
      * 
      */

@@ -9,7 +9,6 @@
       "BBS_Wittlich.Weatherstation.Server/1.0.0": {
         "dependencies": {
           "BBS_Wittlich.Weatherstation.Data": "1.0.0",
-          "BBS_Wittlich.Weatherstation.UI": "1.0.0",
           "Radzen.Blazor": "3.17.3"
         },
         "runtime": {
@@ -376,14 +375,6 @@
         "runtime": {
           "BBS_Wittlich.Weatherstation.Data.dll": {}
         }
-      },
-      "BBS_Wittlich.Weatherstation.UI/1.0.0": {
-        "dependencies": {
-          "Radzen.Blazor": "3.17.3"
-        },
-        "runtime": {
-          "BBS_Wittlich.Weatherstation.UI.dll": {}
-        }
       }
     }
   },
@@ -730,11 +721,6 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "BBS_Wittlich.Weatherstation.Data/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "BBS_Wittlich.Weatherstation.UI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

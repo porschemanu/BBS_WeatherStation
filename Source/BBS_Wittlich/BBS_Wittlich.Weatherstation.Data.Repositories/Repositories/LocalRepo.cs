@@ -8,12 +8,9 @@ using System.Threading.Tasks;
 
 namespace BBS_Wittlich.Weatherstation.Data.Repositories
 {
-    public class EFCoreRepo : IRepositories
+    public class LocalRepo : IRepositories
     {
-        BBS_WetterstationContext _context = new BBS_WetterstationContext();
         string IRepositories.Source { get; set; }
-
-        private string _source;
 
         public WeatherEntry[] Get()
         {
@@ -27,13 +24,13 @@ namespace BBS_Wittlich.Weatherstation.Data.Repositories
             return weatherEntries;
         }
 
-        public WeatherEntry[] Get(string topic, DateTime date)
+        public WeatherEntry[] Get(string topic, DateTime startDate, DateTime endDate)
         {
             WeatherEntry[] weatherEntries = null;
             return weatherEntries;
         }
 
-        public WeatherEntry[] Get(string topic, DateTime startDate, DateTime endDate)
+        public WeatherEntry[] Get(string topic, DateTime date)
         {
             WeatherEntry[] weatherEntries = null;
             return weatherEntries;

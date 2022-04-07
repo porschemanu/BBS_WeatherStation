@@ -621,19 +621,6 @@
         "runtime": {
           "bin/placeholder/BBS_Wittlich.Weatherstation.Data.dll": {}
         }
-      },
-      "BBS_Wittlich.Weatherstation.UI/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Radzen.Blazor": "3.17.3"
-        },
-        "compile": {
-          "bin/placeholder/BBS_Wittlich.Weatherstation.UI.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BBS_Wittlich.Weatherstation.UI.dll": {}
-        }
       }
     }
   },
@@ -1942,17 +1929,11 @@
       "type": "project",
       "path": "../BBS_Wittlich.Weatherstation.Data.Repositories/BBS_Wittlich.Weatherstation.Data.csproj",
       "msbuildProject": "../BBS_Wittlich.Weatherstation.Data.Repositories/BBS_Wittlich.Weatherstation.Data.csproj"
-    },
-    "BBS_Wittlich.Weatherstation.UI/1.0.0": {
-      "type": "project",
-      "path": "../BBS_Wittlich.Weatherstation.UI/BBS_Wittlich.Weatherstation.UI.csproj",
-      "msbuildProject": "../BBS_Wittlich.Weatherstation.UI/BBS_Wittlich.Weatherstation.UI.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "BBS_Wittlich.Weatherstation.Data >= 1.0.0",
-      "BBS_Wittlich.Weatherstation.UI >= 1.0.0",
       "Radzen.Blazor >= 3.17.3"
     ]
   },
@@ -1985,9 +1966,6 @@
           "projectReferences": {
             "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj": {
               "projectPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj"
-            },
-            "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.UI\\BBS_Wittlich.Weatherstation.UI.csproj": {
-              "projectPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.UI\\BBS_Wittlich.Weatherstation.UI.csproj"
             }
           }
         }

@@ -13,27 +13,34 @@ namespace BBS_Wittlich.Weatherstation.Data.Interfaces
         /// </summary>
         /// <param name="topic"></param>
         /// <returns></returns>
-        public Models.WeatherEntry GetLastWeatherEntry(string topic);
+        public string Source { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="topic"></param>
         /// <returns></returns>
-        public Models.WeatherEntry[] GetAllWeatherEntries(string topic);
+        public Models.WeatherEntry[] Get();
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="topic"></param>
         /// <returns></returns>
-        public List<Models.WeatherEntry> GetWeatherStats(string topic);
+        public Models.WeatherEntry[] Get(string topic);
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="topic"></param>
         /// <returns></returns>
-        public List<Models.WeatherEntry> GetWeatherTimespan(string topic);
+        public Models.WeatherEntry[] Get(string topic, DateTime date);
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="topic"></param>
+        /// <returns></returns>
+        public Models.WeatherEntry[] Get(string topic, DateTime startDate, DateTime endDate);
+
     }
 }
