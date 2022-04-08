@@ -44,10 +44,10 @@
         <div class="row">
             <div class="col-sm-12 my-5">
                 <RadzenChart>
-                    <RadzenLineSeries Data="@weatherData" CategoryProperty="timestamp" Title="2022" LineType="LineType.Dashed" ValueProperty="value">
+                    <RadzenLineSeries Data="@queryRespone.Result" CategoryProperty="timestamp" Title="@query.Topic" LineType="LineType.Dashed" ValueProperty="value">
                         <RadzenMarkers MarkerType="MarkerType.Square" />
                     </RadzenLineSeries>
-                    <RadzenCategoryAxis Padding="20" FormatString="{0:mm:}" />
+                    <RadzenCategoryAxis Padding="20" FormatString="@queryRespone.Format" />
                 </RadzenChart>
             </div>
         </div>
@@ -55,7 +55,6 @@
 </div>
 @code {
     private BBS_Wittlich.Weatherstation.Data.Query query = new();
-     Weatherstation.Data.Models.WeatherEntry[] weatherData;
 
     protected override void OnAfterRender(bool firstRender)
     {

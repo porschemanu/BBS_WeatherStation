@@ -1,4 +1,6 @@
-﻿namespace BBS_Wittlich.Weatherstation.Server.Pages
+﻿using BBS_Wittlich.Weatherstation.Data;
+
+namespace BBS_Wittlich.Weatherstation.Server.Pages
 {
     public partial class Area51
     {
@@ -10,13 +12,15 @@
             //await Task.Run(() => DataFetcher(query));
         }
 
+        Respone queryRespone = new();
+
         private async Task DataFetcher(Data.Query query)
         {   
             Data.QueryManager queryManager = new Data.QueryManager();
             Console.WriteLine($"Fetching Weather Data {query.Source} {query.UnitOfWork} {query.Timespan}");
             Data.Respone respone = queryManager.QueryAdministration(query);
-            weatherData = respone.Result;
-            Console.WriteLine($"Finished Fetching Weather Data: {weatherData.Length}");
+            queryRespone = respone;
+            Console.WriteLine($"Finished Fetching Weather Data: {respone.Result.Length}");
         }
 
     }
