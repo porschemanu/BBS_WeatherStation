@@ -43,6 +43,10 @@ build_metadata.AdditionalFiles.CssScope = b-3egem6bn17
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[X:/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Server/Pages/TVView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVFZWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [X:/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Server/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

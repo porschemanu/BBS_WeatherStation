@@ -28,18 +28,12 @@ app.UseRouting();
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
-//Task.Run(() => Test());
+/*
+ Implement the Connection Check find a way to get 
 
+TODO Add the Connection Check to the IRepositories Interface
 
+await Connection Check -> DataCleaner
+ */
 
 app.Run();
-
-
-
-async void Test()
-{
-    // Use for Cleanup
-    Console.WriteLine("Server's running");
-    await Task.Delay(1000);
-    Test();
-}

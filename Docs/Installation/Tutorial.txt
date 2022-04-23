@@ -1,0 +1,92 @@
+//TODO 
+Skript zur Einrichtung -> Abfrage der statischen IP Adresse
+Git/hubverknüpfung
+
+//Hardware
+
+Raspberry Pi
+Octoboard
+MicroSDKarte
+MicroSDAdapter
+
+//Win Software
+
+Raspberry Pi Imager | https://www.raspberrypi.com/software/
+Putty -> Tool für SSH | https://www.putty.org/
+MQTT.fx -> Tool für MQTT | http://www.jensd.de/apps/mqttfx/1.7.1/
+
+//RASP Software
+
+Mosquitto -> MQTT Broker
+NodeRed -> "Koverter MQTT -> SQL"
+MariaDB + MySql -> Datenbank
+phpMyAdmin -> Datenbank Verwaltung
+
+//STEPS
+
+sudo apt update
+sudo apt upgrade
+sudo raspi-config
+
+Mosquitto:
+sudo apt install mosquitto
+
+sudo systemctl start mosquitto    # Starten
+sudo systemctl stop mosquitto     # Stoppen
+sudo systemctl restart mosquitto  # Neustarten
+sudo systemctl disable mosquitto  # Autostart deaktivieren
+sudo systemctl enable mosquitto   # Autostart aktivieren
+
+sudo nano /etc/mosquitto/mosquitto.conf
+-> listener 1883
+-> allow_anonymous true
+sudo reboot
+
+NodeRed:
+bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/deb/update-nodejs-and-nodered)
+sudo systemctl enable nodered.service
+sudo reboot
+
+MariaDB + MySql:
+sudo apt install mariadb-server
+
+sudo mysql -u root -p
+CREATE DATABASE BBS_Wetterstation;
+CREATE USER 'NodeRed'@'%' IDENTIFIED BY 'nodered';
+CREATE USER 'Admin'@'%' IDENTIFIED BY 'root';
+CREATE USER 'WebServer'@'%' IDENTIFIED BY 'Wittlich';
+
+GRANT ALL PRIVILEGES ON BBS_Wetterstation.* to 'NodeRed'@'%' IDENTIFIED BY 'nodered';
+GRANT ALL PRIVILEGES ON BBS_Wetterstation.* to 'Admin'@'%' IDENTIFIED BY 'root';
+GRANT ALL PRIVILEGES ON BBS_Wetterstation.* to 'WebServer'@'%' IDENTIFIED BY 'Wittlich';
+
+FLUSH PRIVILEGES;
+
+sudo nano /etc/mysql/mariadb.conf.d/50-server.cnf
+-> bind adress auskommentieren
+-> port einkommentieren
+sudo reboot
+
+phpMyAdmin: 
+
+sudo apt install phpmyadmin
+sudo nano /etc/apache2/apache2.conf
+-> Include /etc/phpmyadmin/apache.conf
+sudo service apache2 restart /
+sudo apt-get install libapache2-mod-php
+sudo reboot
+
+
+CREATE TABLE `BBS_Wetterstation`.`MQTT` ( `id` INT NOT NULL AUTO_INCREMENT , `Topic` VARCHAR(255) NOT NULL , `Payload` DOUBLE NOT NULL , `Timestamp` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+
+GIT
+sudo apt install git
+mkdir Github
+cd Github/
+git clone https://github.com/PorscheManu/BBS_WeatherStation.git
+
+curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel Current
+
+
+git fetch -> Aktualisierung ziehen

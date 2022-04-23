@@ -2,10 +2,14 @@
 <h3>Area51</h3>
 <PageTitle>Area51</PageTitle>
 
-<label>Current Settings</label>
+<label @bind="topics">Current Settings</label>
 
 <div>
     <div>
+
+        <button @onclick=TriggerCleanup>Run Cleanup</button>
+
+        <hr />
 
         <select @bind="query.Source" class="form-select" aria-label="Default select example">
             <option value="localhost">Localhost</option>
@@ -43,7 +47,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 my-5">
-                <RadzenChart>
+                <RadzenChart @ref="chart0">
                     <RadzenLineSeries Data="@queryRespone.Result" CategoryProperty="timestamp" Title="@query.Topic" LineType="LineType.Dashed" ValueProperty="value">
                         <RadzenMarkers MarkerType="MarkerType.Square" />
                     </RadzenLineSeries>
@@ -54,7 +58,15 @@
     </div>
 </div>
 @code {
+    RadzenChart chart0 = new();
+
     private BBS_Wittlich.Weatherstation.Data.Query query = new();
+
+    private void RefreshTest()
+    {
+        chart0.Reload();
+    }
+
 
     protected override void OnAfterRender(bool firstRender)
     {
@@ -62,14 +74,23 @@
 
         DataFetcher(query);
     }
-    
-     /*
-     * Formatting 
-     * 1 Day: 
-     * 7 Days:
-     * 30 Days:
-     * All Days:  Just the Date 
-     * 
-     * 
-     */
+
+    /*
+    * Formatting 
+    * 1 Day: 
+    * 7 Days:
+    * 30 Days:
+    * All Days:  Just the Date 
+    * 
+    * 
+    */
+
+    private async void TriggerCleanup()
+    {
+        //BBS_Wittlich.Weatherstation.Data.Management.DataManager dataManager = new BBS_Wittlich.Weatherstation.Data.Management.DataManager();
+        //dataManager.RunCleaner();
+
+        RefreshTest();
+    }
+
 }

@@ -42,33 +42,40 @@ namespace BBS_Wittlich.Weatherstation.Data.Repositories
             return weatherEntries.ToArray();
         }
 
+        public void SQLExecuter(string statement)
+        {
+            MySqlConnection mySqlConnection = ConnectionBuilder();
+
+            MySqlCommand cmd = new MySqlCommand(statement, mySqlConnection);
+
+            List<WeatherEntry> weatherEntries = new();
+
+            mySqlConnection.Open();
+            cmd.ExecuteNonQuery();
+            mySqlConnection.Close();
+        }
+
         public WeatherEntry[] Get()
         {   
-            string statement = $"SELECT * FROM MQTT WHERE id mod 1000 = 0 ORDER BY id DESC";
-            Console.WriteLine(statement);
+            string statement = $"SELECT * FROM MQTT ORDER BY id DESC";
             return SQLReader(statement);
-          
         }
 
         public WeatherEntry[] Get(string topic)
         {
             string statement = $"SELECT * FROM MQTT WHERE id mod 100 = 0 AND Topic = '{topic}' ORDER BY id DESC";
-            Console.WriteLine(statement);
             return SQLReader(statement);
         }
 
         public WeatherEntry[] Get(string topic, DateTime date)
         {
-            Console.WriteLine(date);
             string statement = $"SELECT * FROM `MQTT` WHERE Topic = 'temp' AND Timestamp BETWEEN CAST('{date.AddDays(-1).ToString("yyyy-MM-dd")}' AS DATE) AND CAST('{date.Date.ToString("yyyy-MM-dd")}' AS DATE)";
-            Console.WriteLine(statement);
             return SQLReader(statement);
         }
         
         public WeatherEntry[] Get(string topic, DateTime startDate, DateTime endDate)
         {
             string statement = $"SELECT * FROM `MQTT` WHERE Topic = 'temp' AND Timestamp between CAST('{startDate.ToString("yyyy-MM-dd")}' AS DATE) and CAST('{endDate.ToString("yyyy-MM-dd")}' AS DATE)";
-            Console.WriteLine(statement);
             return SQLReader(statement);
         }
     }
