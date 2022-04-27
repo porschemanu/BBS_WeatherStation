@@ -32,9 +32,9 @@ namespace BBS_Wittlich.Weatherstation.Data.Repositories
             {
                 WeatherEntry weatherEntry = new WeatherEntry();
                 weatherEntry.Id = rdr.GetInt32(0);
-                weatherEntry.topic = rdr.GetString(1);
-                weatherEntry.value = rdr.GetDouble(2);
-                weatherEntry.timestamp = rdr.GetDateTime(3);
+                weatherEntry.topic = "FUCK";
+                weatherEntry.value = rdr.GetDouble(1);
+                weatherEntry.timestamp = rdr.GetDateTime(2);
                 weatherEntries.Add(weatherEntry);
             }
 
@@ -64,7 +64,7 @@ namespace BBS_Wittlich.Weatherstation.Data.Repositories
 
         public WeatherEntry[] Get(string topic)
         {
-            string statement = $"SELECT * FROM {topic} WHERE Topic = '{topic}' ORDER BY id DESC";
+            string statement = $"SELECT * FROM `{topic}` ORDER BY id DESC";
             return SQLReader(statement);
         }
 
@@ -76,7 +76,7 @@ namespace BBS_Wittlich.Weatherstation.Data.Repositories
         
         public WeatherEntry[] Get(string topic, DateTime startDate, DateTime endDate)
         {
-            string statement = $"SELECT * FROM `{topic}` WHERE Topic = '{topic}' AND Timestamp BETWEEN '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}'AND '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}' ORDER BY id DESC";
+            string statement = $"SELECT * FROM `{topic}` WHERE Timestamp BETWEEN '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}' AND '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}' ORDER BY id DESC";
             return SQLReader(statement);
         }
 
@@ -87,7 +87,7 @@ namespace BBS_Wittlich.Weatherstation.Data.Repositories
 
         public WeatherEntry GetLast(string topic)
         {
-            string statement = $"SELECT * FROM `{topic}` WHERE Topic = '{topic}' LIMIT 1";
+            string statement = $"SELECT * FROM `{topic}` LIMIT 1";
             return SQLReader(statement).FirstOrDefault();
         }
     }

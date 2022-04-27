@@ -89,13 +89,13 @@ namespace BBS_Wittlich.Weatherstation.Data.Management
             int i2 = 1;
             foreach (string statement in statements)
             {
-                //SQL += statement;
+                SQL += statement;
                 Console.WriteLine($"{i2}/{statements.Count}");
-                dcRepo.SQLExecuter(statement);
+                //dcRepo.SQLExecuter(statement);
                 i2 ++;
             }
 
-            //dcRepo.SQLExecuter(SQL);
+            dcRepo.SQLExecuter(SQL);
             stopwatch.Stop();
             Console.WriteLine($"DataCleaner Finished in {stopwatch.Elapsed.TotalSeconds}");
         }
