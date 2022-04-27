@@ -21,16 +21,16 @@ namespace BBS_Wittlich.Weatherstation.Data.Management
 
         private void DataCleaner()
         {
-            Stopwatch stopwatch = new();
             Console.WriteLine("Cleaning Started");
+            List<string> statements = new List<string>();
+            Stopwatch stopwatch = new();
             stopwatch.Start();
-            SQLClientRepo sQLClientRepo = new SQLClientRepo();
-            sQLClientRepo.Source = "192.168.0.10";
-
-            Models.WeatherEntry[] weatherdata = sQLClientRepo.Get();
-            
+            DCRepo dcRepo = new DCRepo();
+            dcRepo.Source = "192.168.0.10";
+            List<Models.WeatherEntry> allWeatherdata = dcRepo.Get().ToList();
             List<string> topics = new List<string>();
-            foreach (Models.WeatherEntry entry in weatherdata)
+            
+            foreach (Models.WeatherEntry entry in allWeatherdata)
             {
                 if (!topics.Contains(entry.topic))
                 {
@@ -38,21 +38,15 @@ namespace BBS_Wittlich.Weatherstation.Data.Management
                 }
             }
 
-            string statement = "";
             foreach (string topic in topics)
             {
+                List<Models.WeatherEntry> topicWeatherdata = dcRepo.Get(topic).OrderByDescending(e => e.timestamp).ToList();
+
                 Console.WriteLine($"Now cleaning: {topic}");
-                
-                statement = $"CREATE TABLE IF NOT EXISTS {topic} (id int PRIMARY KEY NOT NULL AUTO_INCREMENT, Payload double, Timestamp datetime);";
-                sQLClientRepo.SQLExecuter(statement);
+                statements.Add($"CREATE TABLE IF NOT EXISTS {topic} (id int PRIMARY KEY NOT NULL AUTO_INCREMENT, Payload double, Timestamp datetime);");  
 
-                Console.WriteLine($"Table created");
-
-                bool unsortedEntries = true;
-                Models.WeatherEntry firstEntry = sQLClientRepo.GetLast(topic);
-                int i = 0;
-                while (unsortedEntries) {
-                    Console.WriteLine($"Operation: {i}");
+                while (topicWeatherdata.Count != 0) {
+                    Models.WeatherEntry firstEntry = topicWeatherdata.Last();
 
                     DateTime startDateTime = firstEntry.timestamp.AddSeconds(-1);
                     DateTime endDateTime;
@@ -70,36 +64,38 @@ namespace BBS_Wittlich.Weatherstation.Data.Management
                         }
                     }
 
-                    Models.WeatherEntry[] weatherEntries = sQLClientRepo.Get(topic, startDateTime, endDateTime);
+                    List<Models.WeatherEntry> timespanEntries = topicWeatherdata.Where(e => e.timestamp < endDateTime && e.timestamp >= startDateTime).ToList();
 
                     Models.WeatherEntry finalWeatherEntry = new();
                     double sumValue = 0;
 
-                    foreach (Models.WeatherEntry weatherEntry in weatherEntries)
+                    foreach (Models.WeatherEntry weatherEntry in timespanEntries)
                     {
                         sumValue += weatherEntry.value;
                     }
-
                     finalWeatherEntry.topic = topic;
-                    finalWeatherEntry.value = sumValue / weatherEntries.Length;
+                    finalWeatherEntry.value = sumValue / timespanEntries.Count;
                     finalWeatherEntry.timestamp = startDateTime;
-
-
-                    Console.WriteLine("Inserting...");
-                    statement = $"INSERT INTO `{ finalWeatherEntry.topic}` (`Payload`, `Timestamp`) VALUES({ finalWeatherEntry.value.ToString().Replace(',', '.')}, CAST('{finalWeatherEntry.timestamp.ToString("yyyy-MM-dd HH:mm")}' AS datetime));";
-                    sQLClientRepo.SQLExecuter(statement);
-
-                    Console.WriteLine("Deleting...");
-                    foreach (Models.WeatherEntry weatherEntry in weatherEntries)
+                    statements.Add($"INSERT INTO `{ finalWeatherEntry.topic}` (`Payload`, `Timestamp`) VALUES({ finalWeatherEntry.value.ToString().Replace(',', '.')}, CAST('{finalWeatherEntry.timestamp.ToString("yyyy-MM-dd HH:mm")}' AS datetime));");
+                    foreach (Models.WeatherEntry weatherEntry in timespanEntries)
                     {
-                        statement = $"DELETE FROM `MQTT` WHERE id = {weatherEntry.Id}";
-                        sQLClientRepo.SQLExecuter(statement);
+                        topicWeatherdata.Remove(weatherEntry);
                     }
-                    firstEntry = sQLClientRepo.GetLast(topic);
-                    if(firstEntry == null) { unsortedEntries = false; }
-                    i++;
                 }
+
             }
+            statements.Add("TRUNCATE TABLE MQTT;");
+            string SQL = "";
+            int i2 = 1;
+            foreach (string statement in statements)
+            {
+                //SQL += statement;
+                Console.WriteLine($"{i2}/{statements.Count}");
+                dcRepo.SQLExecuter(statement);
+                i2 ++;
+            }
+
+            //dcRepo.SQLExecuter(SQL);
             stopwatch.Stop();
             Console.WriteLine($"DataCleaner Finished in {stopwatch.Elapsed.TotalSeconds}");
         }
