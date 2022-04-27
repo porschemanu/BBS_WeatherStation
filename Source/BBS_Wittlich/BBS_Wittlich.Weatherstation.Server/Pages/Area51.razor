@@ -62,9 +62,13 @@
 
     private BBS_Wittlich.Weatherstation.Data.Query query = new();
 
+    Data.Management.DataManager dataManager = new();
+
     private void RefreshTest()
     {
-        chart0.Reload();
+        dataManager.RunCleaner();
+
+        //chart0.Reload();
     }
 
 

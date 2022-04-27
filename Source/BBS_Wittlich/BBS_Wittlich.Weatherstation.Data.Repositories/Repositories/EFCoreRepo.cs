@@ -38,5 +38,15 @@ namespace BBS_Wittlich.Weatherstation.Data.Repositories
             WeatherEntry[] weatherEntries = null;
             return weatherEntries;
         }
+
+        public WeatherEntry Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public WeatherEntry GetLast(string topic)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

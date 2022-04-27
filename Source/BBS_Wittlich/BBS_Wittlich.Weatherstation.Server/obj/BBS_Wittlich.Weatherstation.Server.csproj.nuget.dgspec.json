@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\BBS_Wittlich.Weatherstation.Server.csproj": {}
+    "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\BBS_Wittlich.Weatherstation.Server.csproj": {}
   },
   "projects": {
-    "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj": {
+    "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj",
+        "projectUniqueName": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj",
         "projectName": "BBS_Wittlich.Weatherstation.Data",
-        "projectPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj",
+        "projectPath": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj",
         "packagesPath": "C:\\Users\\manue\\.nuget\\packages\\",
-        "outputPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\obj\\",
+        "outputPath": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\manue\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,14 +82,14 @@
         }
       }
     },
-    "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\BBS_Wittlich.Weatherstation.Server.csproj": {
+    "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\BBS_Wittlich.Weatherstation.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\BBS_Wittlich.Weatherstation.Server.csproj",
+        "projectUniqueName": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\BBS_Wittlich.Weatherstation.Server.csproj",
         "projectName": "BBS_Wittlich.Weatherstation.Server",
-        "projectPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\BBS_Wittlich.Weatherstation.Server.csproj",
+        "projectPath": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\BBS_Wittlich.Weatherstation.Server.csproj",
         "packagesPath": "C:\\Users\\manue\\.nuget\\packages\\",
-        "outputPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\",
+        "outputPath": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\manue\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -106,8 +106,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj": {
-                "projectPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj"
+              "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj": {
+                "projectPath": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj"
               }
             }
           }

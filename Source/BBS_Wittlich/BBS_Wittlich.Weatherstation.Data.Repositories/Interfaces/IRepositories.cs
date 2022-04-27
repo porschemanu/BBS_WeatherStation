@@ -42,5 +42,8 @@ namespace BBS_Wittlich.Weatherstation.Data.Interfaces
         /// <returns></returns>
         public Models.WeatherEntry[] Get(string topic, DateTime startDate, DateTime endDate);
 
+        public Models.WeatherEntry Get(int id);
+
+        public Models.WeatherEntry GetLast(string topic);
     }
 }

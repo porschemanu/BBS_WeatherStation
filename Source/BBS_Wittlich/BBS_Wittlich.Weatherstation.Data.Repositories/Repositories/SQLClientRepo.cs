@@ -31,6 +31,7 @@ namespace BBS_Wittlich.Weatherstation.Data.Repositories
             while (rdr.Read())
             {
                 WeatherEntry weatherEntry = new WeatherEntry();
+                weatherEntry.Id = rdr.GetInt32(0);
                 weatherEntry.topic = rdr.GetString(1);
                 weatherEntry.value = rdr.GetDouble(2);
                 weatherEntry.timestamp = rdr.GetDateTime(3);
@@ -63,20 +64,31 @@ namespace BBS_Wittlich.Weatherstation.Data.Repositories
 
         public WeatherEntry[] Get(string topic)
         {
-            string statement = $"SELECT * FROM MQTT WHERE id mod 100 = 0 AND Topic = '{topic}' ORDER BY id DESC";
+            string statement = $"SELECT * FROM MQTT WHERE Topic = '{topic}' ORDER BY id DESC";
             return SQLReader(statement);
         }
 
         public WeatherEntry[] Get(string topic, DateTime date)
         {
-            string statement = $"SELECT * FROM `MQTT` WHERE Topic = 'temp' AND Timestamp BETWEEN CAST('{date.AddDays(-1).ToString("yyyy-MM-dd")}' AS DATE) AND CAST('{date.Date.ToString("yyyy-MM-dd")}' AS DATE)";
+            string statement = $"SELECT * FROM `MQTT` WHERE Topic = '{topic}' AND Timestamp BETWEEN CAST('{date.AddDays(-1).ToString("yyyy-MM-dd")}' AS DATE) AND CAST('{date.Date.ToString("yyyy-MM-dd")}' AS DATE) ORDER BY id DESC";
             return SQLReader(statement);
         }
         
         public WeatherEntry[] Get(string topic, DateTime startDate, DateTime endDate)
         {
-            string statement = $"SELECT * FROM `MQTT` WHERE Topic = 'temp' AND Timestamp between CAST('{startDate.ToString("yyyy-MM-dd")}' AS DATE) and CAST('{endDate.ToString("yyyy-MM-dd")}' AS DATE)";
+            string statement = $"SELECT * FROM `MQTT` WHERE Topic = '{topic}' AND Timestamp BETWEEN '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}'AND '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}' ORDER BY id DESC";
             return SQLReader(statement);
+        }
+
+        public WeatherEntry Get(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public WeatherEntry GetLast(string topic)
+        {
+            string statement = $"SELECT * FROM `MQTT` WHERE Topic = '{topic}' LIMIT 1";
+            return SQLReader(statement).FirstOrDefault();
         }
     }
 }

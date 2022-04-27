@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FvVZVp2n2MRjntGnEWyJSGDtlz53+M8BYR00gTl9xmI=",
+  "Hash": "7npj29Z/NoCmw1qOridckxv4dCp8dbKUMNSQazhqH3U=",
   "Source": "BBS_Wittlich.Weatherstation.Server",
   "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "BBS_Wittlich.Weatherstation.Server\\wwwroot",
       "Source": "BBS_Wittlich.Weatherstation.Server",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "Pattern": "**"
     }
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "C:\\Users\\manue\\.nuget\\packages\\radzen.blazor\\3.17.3\\staticwebassets\\Radzen.Blazor.js"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BBS_Wittlich.Weatherstation.Server.styles.css",
+      "Identity": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BBS_Wittlich.Weatherstation.Server.styles.css",
       "SourceId": "BBS_Wittlich.Weatherstation.Server",
       "SourceType": "Computed",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "RelativePath": "BBS_Wittlich.Weatherstation.Server.styles.css",
       "AssetKind": "All",
@@ -490,13 +490,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BBS_Wittlich.Weatherstation.Server.styles.css"
+      "OriginalItemSpec": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\Debug\\net6.0\\scopedcss\\bundle\\BBS_Wittlich.Weatherstation.Server.styles.css"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BBS_Wittlich.Weatherstation.Server.bundle.scp.css",
+      "Identity": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BBS_Wittlich.Weatherstation.Server.bundle.scp.css",
       "SourceId": "BBS_Wittlich.Weatherstation.Server",
       "SourceType": "Computed",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "RelativePath": "BBS_Wittlich.Weatherstation.Server.bundle.scp.css",
       "AssetKind": "All",
@@ -507,13 +507,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BBS_Wittlich.Weatherstation.Server.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BBS_Wittlich.Weatherstation.Server.bundle.scp.css"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "BBS_Wittlich.Weatherstation.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "BBS_Wittlich.Weatherstation.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "BBS_Wittlich.Weatherstation.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "BBS_Wittlich.Weatherstation.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "BBS_Wittlich.Weatherstation.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "BBS_Wittlich.Weatherstation.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "BBS_Wittlich.Weatherstation.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "BBS_Wittlich.Weatherstation.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "BBS_Wittlich.Weatherstation.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "BBS_Wittlich.Weatherstation.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "BBS_Wittlich.Weatherstation.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\css\\site.css",
       "SourceId": "BBS_Wittlich.Weatherstation.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\favicon.ico",
       "SourceId": "BBS_Wittlich.Weatherstation.Server",
       "SourceType": "Discovered",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\wwwroot\\",
       "BasePath": "_content/BBS_Wittlich.Weatherstation.Server",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
