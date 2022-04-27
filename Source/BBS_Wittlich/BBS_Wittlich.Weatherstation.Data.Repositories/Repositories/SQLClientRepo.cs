@@ -64,19 +64,19 @@ namespace BBS_Wittlich.Weatherstation.Data.Repositories
 
         public WeatherEntry[] Get(string topic)
         {
-            string statement = $"SELECT * FROM MQTT WHERE Topic = '{topic}' ORDER BY id DESC";
+            string statement = $"SELECT * FROM {topic} WHERE Topic = '{topic}' ORDER BY id DESC";
             return SQLReader(statement);
         }
 
         public WeatherEntry[] Get(string topic, DateTime date)
         {
-            string statement = $"SELECT * FROM `MQTT` WHERE Topic = '{topic}' AND Timestamp BETWEEN CAST('{date.AddDays(-1).ToString("yyyy-MM-dd")}' AS DATE) AND CAST('{date.Date.ToString("yyyy-MM-dd")}' AS DATE) ORDER BY id DESC";
+            string statement = $"SELECT * FROM `{topic}` WHERE Timestamp BETWEEN '{date.AddDays(-1).ToString("yyyy-MM-dd HH:mm:ss")}' AND '{date.Date.ToString("yyyy-MM-dd HH:mm:ss")}' ORDER BY id DESC";
             return SQLReader(statement);
         }
         
         public WeatherEntry[] Get(string topic, DateTime startDate, DateTime endDate)
         {
-            string statement = $"SELECT * FROM `MQTT` WHERE Topic = '{topic}' AND Timestamp BETWEEN '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}'AND '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}' ORDER BY id DESC";
+            string statement = $"SELECT * FROM `{topic}` WHERE Topic = '{topic}' AND Timestamp BETWEEN '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}'AND '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}' ORDER BY id DESC";
             return SQLReader(statement);
         }
 
@@ -87,7 +87,7 @@ namespace BBS_Wittlich.Weatherstation.Data.Repositories
 
         public WeatherEntry GetLast(string topic)
         {
-            string statement = $"SELECT * FROM `MQTT` WHERE Topic = '{topic}' LIMIT 1";
+            string statement = $"SELECT * FROM `{topic}` WHERE Topic = '{topic}' LIMIT 1";
             return SQLReader(statement).FirstOrDefault();
         }
     }
