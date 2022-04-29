@@ -1943,11 +1943,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\BBS_Wittlich.Weatherstation.Server.csproj",
+      "projectUniqueName": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\BBS_Wittlich.Weatherstation.Server.csproj",
       "projectName": "BBS_Wittlich.Weatherstation.Server",
-      "projectPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\BBS_Wittlich.Weatherstation.Server.csproj",
+      "projectPath": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\BBS_Wittlich.Weatherstation.Server.csproj",
       "packagesPath": "C:\\Users\\manue\\.nuget\\packages\\",
-      "outputPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\",
+      "outputPath": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\manue\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1964,8 +1964,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj": {
-              "projectPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj"
+            "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj": {
+              "projectPath": "C:\\Users\\manue\\Documents\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj"
             }
           }
         }

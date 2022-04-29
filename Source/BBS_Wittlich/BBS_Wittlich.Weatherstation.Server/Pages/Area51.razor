@@ -59,7 +59,6 @@
 </div>
 @code {
     RadzenChart chart0 = new();
-
     private BBS_Wittlich.Weatherstation.Data.Query query = new();
 
     Data.Management.DataManager dataManager = new();
@@ -67,7 +66,6 @@
     private void RefreshTest()
     {
         dataManager.RunCleaner();
-
         //chart0.Reload();
     }
 

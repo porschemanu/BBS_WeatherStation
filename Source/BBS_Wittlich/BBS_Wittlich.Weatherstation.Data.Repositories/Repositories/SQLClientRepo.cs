@@ -70,13 +70,15 @@ namespace BBS_Wittlich.Weatherstation.Data.Repositories
 
         public WeatherEntry[] Get(string topic, DateTime date)
         {
-            string statement = $"SELECT * FROM `{topic}` WHERE Timestamp BETWEEN '{date.AddDays(-1).ToString("yyyy-MM-dd HH:mm:ss")}' AND '{date.Date.ToString("yyyy-MM-dd HH:mm:ss")}' ORDER BY id DESC";
+            string statement = $"SELECT * FROM `{topic}` WHERE Timestamp BETWEEN '{date.ToString("yyyy-MM-dd 00:00:00")}' AND '{date.Date.ToString("yyyy-MM-dd 23:59:59")}' ORDER BY id DESC";
+            Console.WriteLine(statement);
             return SQLReader(statement);
         }
         
         public WeatherEntry[] Get(string topic, DateTime startDate, DateTime endDate)
         {
             string statement = $"SELECT * FROM `{topic}` WHERE Timestamp BETWEEN '{startDate.ToString("yyyy-MM-dd HH:mm:ss")}' AND '{endDate.ToString("yyyy-MM-dd HH:mm:ss")}' ORDER BY id DESC";
+            Console.WriteLine(statement);
             return SQLReader(statement);
         }
 

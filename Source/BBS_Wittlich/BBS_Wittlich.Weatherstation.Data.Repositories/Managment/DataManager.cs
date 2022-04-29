@@ -26,7 +26,7 @@ namespace BBS_Wittlich.Weatherstation.Data.Management
             Stopwatch stopwatch = new();
             stopwatch.Start();
             DCRepo dcRepo = new DCRepo();
-            dcRepo.Source = "192.168.0.10";
+            dcRepo.Source = "127.0.0.1";
             List<Models.WeatherEntry> allWeatherdata = dcRepo.Get().ToList();
             List<string> topics = new List<string>();
             

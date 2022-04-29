@@ -8,7 +8,7 @@ namespace BBS_Wittlich.Weatherstation.Data
 {
     public class Query
     {
-        public string Source { get; set; } = "192.168.0.10";
+        public string Source { get; set; } = "127.0.0.1";
         public string UnitOfWork { get; set; } = "sqlclient";
         public string Topic { get; set; } = "temp";
         public string Timespan { get; set; } = "all";
