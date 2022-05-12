@@ -7,11 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Radzen.Blazor" Version="3.17.3" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\BBS_Wittlich.Weatherstation.Data.Repositories\BBS_Wittlich.Weatherstation.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="MudBlazor" />
+    <None Remove="Radzen.Blazor" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MudBlazor" Version="6.0.10" />
+    <PackageReference Include="Radzen.Blazor" Version="3.18.8" />
+  </ItemGroup>
 </Project>

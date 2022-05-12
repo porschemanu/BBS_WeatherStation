@@ -47,28 +47,15 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 my-5">
-                <RadzenChart @ref="chart0">
-                    <RadzenLineSeries Data="@queryRespone.Result" CategoryProperty="timestamp" Title="@query.Topic" LineType="LineType.Dashed" ValueProperty="value">
-                        <RadzenMarkers MarkerType="MarkerType.Square" />
-                    </RadzenLineSeries>
-                    <RadzenCategoryAxis Padding="20" FormatString="@queryRespone.Format" />
-                </RadzenChart>
+
             </div>
         </div>
     </div>
 </div>
-@code {
-    RadzenChart chart0 = new();
+@code{
     private BBS_Wittlich.Weatherstation.Data.Query query = new();
 
     Data.Management.DataManager dataManager = new();
-
-    private void RefreshTest()
-    {
-        dataManager.RunCleaner();
-        //chart0.Reload();
-    }
-
 
     protected override void OnAfterRender(bool firstRender)
     {
@@ -77,22 +64,9 @@
         DataFetcher(query);
     }
 
-    /*
-    * Formatting 
-    * 1 Day: 
-    * 7 Days:
-    * 30 Days:
-    * All Days:  Just the Date 
-    * 
-    * 
-    */
 
     private async void TriggerCleanup()
     {
-        //BBS_Wittlich.Weatherstation.Data.Management.DataManager dataManager = new BBS_Wittlich.Weatherstation.Data.Management.DataManager();
-        //dataManager.RunCleaner();
-
-        RefreshTest();
+        dataManager.RunCleaner();
     }
    }
-

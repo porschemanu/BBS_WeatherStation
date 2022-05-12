@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{71C96242-CCDC-41E1-90B7-4DB75A5A6B01}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BBS_Wittlich.Weatherstation.Server/Properties/launchSettings.json">
+    <Files>
+      <File FileName="BBS_Wittlich.Weatherstation.Server/Properties/launchSettings.json" Line="15" Column="7" />
+      <File FileName="BBS_Wittlich.Weatherstation.Server/Program.cs" Line="11" Column="35" />
+      <File FileName="BBS_Wittlich.Weatherstation.Server/Shared/MainLayout.razor" Line="17" Column="38" />
+      <File FileName="BBS_Wittlich.Weatherstation.Server/Pages/Index.razor" Line="4" Column="28" />
+      <File FileName="BBS_Wittlich.Weatherstation.Server/Pages/Dashboard.razor" Line="4" Column="93" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BBS_Wittlich" expanded="True">
+            <Node name="BBS_Wittlich.Weatherstation.Data" expanded="True">
+              <Node name="Managment" expanded="True" />
+            </Node>
+            <Node name="BBS_Wittlich.Weatherstation.Server" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Pages" expanded="True" />
+              <Node name="Properties" expanded="True">
+                <Node name="launchSettings.json" selected="True" />
+              </Node>
+              <Node name="Shared" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.BBS__Wittlich.Weatherstation.Server PreferredExecutionTarget="/Applications/Firefox.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+</Properties>

@@ -14,7 +14,12 @@
     </PackageReference>
     <PackageReference Include="MySql.Data" Version="8.0.28" />
     <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.0" />
-    <PackageReference Include="Radzen.Blazor" Version="3.17.3" />
+    <PackageReference Include="MudBlazor" Version="6.0.10" />
+    <PackageReference Include="Radzen.Blazor" Version="3.18.8" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="MudBlazor" />
+    <None Remove="Radzen.Blazor" />
+  </ItemGroup>
 </Project>

@@ -1,19 +1,32 @@
 ﻿@inherits LayoutComponentBase
+@using MudBlazor
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
 
-<PageTitle>BBS_Wittlich.Weatherstation.Server</PageTitle>
+<MudLayout>
+    <MudAppBar>
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        BBS Weatherstation
+    </MudAppBar>
+    <MudDrawer  ClipMode="@DrawerClipMode.Always" @bind-Open="@_drawerOpen">
+        <MudNavMenu>
+            <MudNavLink Href="/dashboard" Match="NavLinkMatch.All">Dashboard</MudNavLink>
+            <MudNavLink Href="/tvview" Match="NavLinkMatch.Prefix">TV-View</MudNavLink>
+            <MudNavLink Href="/doku" Match="NavLinkMatch.Prefix">Dokumentation</MudNavLink>
+            <MudNavLink Href="/area51" Match="NavLinkMatch.Prefix">Dokumentation</MudNavLink>
+        </MudNavMenu>
+    </MudDrawer>
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+@code {
+    bool _drawerOpen = true;
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+}

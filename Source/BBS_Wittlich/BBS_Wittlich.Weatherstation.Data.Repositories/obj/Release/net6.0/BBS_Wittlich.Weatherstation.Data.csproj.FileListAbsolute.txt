@@ -1,0 +1,14 @@
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/bin/Release/net6.0/BBS_Wittlich.Weatherstation.Data.deps.json
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/bin/Release/net6.0/BBS_Wittlich.Weatherstation.Data.runtimeconfig.json
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/bin/Release/net6.0/BBS_Wittlich.Weatherstation.Data.dll
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/bin/Release/net6.0/BBS_Wittlich.Weatherstation.Data.pdb
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/obj/Release/net6.0/BBS_Wittlich.Weatherstation.Data.csproj.AssemblyReference.cache
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/obj/Release/net6.0/BBS_Wittlich.Weatherstation.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/obj/Release/net6.0/BBS_Wittlich.Weatherstation.Data.AssemblyInfoInputs.cache
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/obj/Release/net6.0/BBS_Wittlich.Weatherstation.Data.AssemblyInfo.cs
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/obj/Release/net6.0/BBS_Wittlich.Weatherstation.Data.csproj.CoreCompileInputs.cache
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/obj/Release/net6.0/BBS_Wittlich.Weatherstation.Data.dll
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/obj/Release/net6.0/refint/BBS_Wittlich.Weatherstation.Data.dll
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/obj/Release/net6.0/BBS_Wittlich.Weatherstation.Data.pdb
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/obj/Release/net6.0/BBS_Wittlich.Weatherstation.Data.genruntimeconfig.cache
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/obj/Release/net6.0/ref/BBS_Wittlich.Weatherstation.Data.dll
