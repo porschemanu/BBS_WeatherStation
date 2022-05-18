@@ -13,9 +13,13 @@
   <ItemGroup>
     <None Remove="MudBlazor" />
     <None Remove="Radzen.Blazor" />
+    <None Remove="Images\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MudBlazor" Version="6.0.10" />
     <PackageReference Include="Radzen.Blazor" Version="3.18.8" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
 </Project>

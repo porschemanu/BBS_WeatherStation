@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server.csproj": {}
+    "/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich/BBS_Wittlich.Weatherstation.Server.csproj": {}
   },
   "projects": {
-    "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server.csproj": {
+    "/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich/BBS_Wittlich.Weatherstation.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server.csproj",
+        "projectUniqueName": "/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich/BBS_Wittlich.Weatherstation.Server.csproj",
         "projectName": "BBS_Wittlich.Weatherstation.Server",
-        "projectPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server.csproj",
-        "packagesPath": "C:\\Users\\manue\\.nuget\\packages\\",
-        "outputPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich\\obj\\",
+        "projectPath": "/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich/BBS_Wittlich.Weatherstation.Server.csproj",
+        "packagesPath": "/Users/manuelyates/.nuget/packages/",
+        "outputPath": "/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\manue\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/manuelyates/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.202/RuntimeIdentifierGraph.json"
         }
       }
     }

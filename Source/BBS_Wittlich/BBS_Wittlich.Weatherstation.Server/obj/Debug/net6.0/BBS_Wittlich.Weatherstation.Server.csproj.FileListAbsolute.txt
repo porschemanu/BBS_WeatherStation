@@ -170,3 +170,5 @@ C:/Users/manue/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittl
 /Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Server/obj/Debug/net6.0/BBS_Wittlich.Weatherstation.Server.pdb
 /Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Server/obj/Debug/net6.0/BBS_Wittlich.Weatherstation.Server.genruntimeconfig.cache
 /Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Server/obj/Debug/net6.0/ref/BBS_Wittlich.Weatherstation.Server.dll
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Server/bin/Debug/net6.0/Radzen.Blazor.dll
+/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Server/bin/Debug/net6.0/System.Linq.Dynamic.Core.dll
