@@ -53,9 +53,10 @@
     </div>
 </div>
 @code{
-    private BBS_Wittlich.Weatherstation.Data.Query query = new();
+    private BBS_Wittlich.Weatherstation.Data.Management.Query query = new();
 
-    Data.Management.DataManager dataManager = new();
+
+    BBS_Wittlich.Weatherstation.Data.Management.DataManager dataManager = new();
 
     protected override void OnAfterRender(bool firstRender)
     {
@@ -68,5 +69,6 @@
     private async void TriggerCleanup()
     {
         dataManager.RunCleaner();
+
     }
    }
