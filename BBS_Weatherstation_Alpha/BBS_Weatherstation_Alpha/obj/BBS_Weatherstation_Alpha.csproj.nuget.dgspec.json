@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/BBS_Weatherstation_Alpha/BBS_Weatherstation_Alpha/BBS_Weatherstation_Alpha.csproj": {}
+    "X:\\GitHub\\BBS_WeatherStation\\BBS_Weatherstation_Alpha\\BBS_Weatherstation_Alpha\\BBS_Weatherstation_Alpha.csproj": {}
   },
   "projects": {
-    "/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/BBS_Weatherstation_Alpha/BBS_Weatherstation_Alpha/BBS_Weatherstation_Alpha.csproj": {
+    "X:\\GitHub\\BBS_WeatherStation\\BBS_Weatherstation_Alpha\\BBS_Weatherstation_Alpha\\BBS_Weatherstation_Alpha.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/BBS_Weatherstation_Alpha/BBS_Weatherstation_Alpha/BBS_Weatherstation_Alpha.csproj",
+        "projectUniqueName": "X:\\GitHub\\BBS_WeatherStation\\BBS_Weatherstation_Alpha\\BBS_Weatherstation_Alpha\\BBS_Weatherstation_Alpha.csproj",
         "projectName": "BBS_Weatherstation_Alpha",
-        "projectPath": "/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/BBS_Weatherstation_Alpha/BBS_Weatherstation_Alpha/BBS_Weatherstation_Alpha.csproj",
-        "packagesPath": "/Users/manuelyates/.nuget/packages/",
-        "outputPath": "/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/BBS_Weatherstation_Alpha/BBS_Weatherstation_Alpha/obj/",
+        "projectPath": "X:\\GitHub\\BBS_WeatherStation\\BBS_Weatherstation_Alpha\\BBS_Weatherstation_Alpha\\BBS_Weatherstation_Alpha.csproj",
+        "packagesPath": "C:\\Users\\manue\\.nuget\\packages\\",
+        "outputPath": "X:\\GitHub\\BBS_WeatherStation\\BBS_Weatherstation_Alpha\\BBS_Weatherstation_Alpha\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/manuelyates/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\manue\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,6 +47,10 @@
             "MySql.Data": {
               "target": "Package",
               "version": "[8.0.29, )"
+            },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[3.18.11, )"
             }
           },
           "imports": [
@@ -65,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

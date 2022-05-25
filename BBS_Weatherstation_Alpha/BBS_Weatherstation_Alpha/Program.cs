@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using BBS_Weatherstation_Alpha.Data.DataCleanerRepo;
 using MudBlazor.Services;
+using BBS_Weatherstation_SeriesA;
+using BBS_Weatherstation_SeriesA.Data.Startup;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,7 +30,7 @@ app.UseRouting();
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
-Task.Run(() => DataCleanerRepo.DataCleaner());
+await Startup.StartupProcedure();
 
 app.Run();
 

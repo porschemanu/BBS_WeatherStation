@@ -1,23 +1,27 @@
-﻿@page "/dashboard"
+﻿@using BBS_Weatherstation_SeriesA.Data.Global
+@using Radzen.Blazor
+@page "/dashboard"
+
 <MudGrid>
-    <MudItem xs="12" sm="12">
-        <MudPaper Class="d-flex align-center justify-center py-8">
+    <MudItem xs="12" >
+        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
             <MudSelect T="string" Label="Daten" AnchorOrigin="Origin.BottomCenter">
-                <MudSelectItem Value="@("Alle")" />
-                <MudSelectItem Disabled="true" Value="@("Temperatur")" />
-                <MudSelectItem Disabled="true" Value="@("Luftfeuchtigkeit")" />
-                <MudSelectItem Disabled="true" Value="@("Luftdruck")" />
+                <MudSelectItem Value="@("all")" />
+                @foreach(string measurement in Cache.Measurements)
+                {
+                    <MudSelectItem Disabled="true" Value="@(measurement)" />
+                }
             </MudSelect>
         </MudPaper>
     </MudItem>
-    <MudItem xs="12" sm="12">
-        <MudPaper Class="d-flex align-center justify-center py-8">
+    <MudItem xs="12" >
+        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
             <MudButtonGroup Color="Color.Primary" Variant="Variant.Outlined">
-                <MudButton>Heute</MudButton>
-                <MudButton>Gestern</MudButton>
-                <MudButton>1 Woche</MudButton>
-                <MudButton>1 Monat</MudButton>
-                <MudButton>1 Jahr</MudButton>
+                <MudButton OnClick=@(() => timespan = "today" )>Heute</MudButton>
+                <MudButton OnClick=@(() => timespan = "yesterday" )>Gestern</MudButton>
+                <MudButton OnClick=@(() => timespan = "week" )>1 Woche</MudButton>
+                <MudButton OnClick=@(() => timespan = "month" )>1 Monat</MudButton>
+                <MudButton OnClick=@(() => timespan = "year" )>1 Jahr</MudButton>
                 <MudButton>Alle</MudButton>
             </MudButtonGroup>
             <MudSpacer />
@@ -26,40 +30,47 @@
     </MudItem>
     <MudHidden Invert="@_debug">
         <MudItem xs="12" sm="12">
-            <MudPaper Class="d-flex align-center justify-center py-8">
+            <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
                 <MudText Typo="Typo.h6">Debug</MudText>
+                <label></label>
             </MudPaper>
         </MudItem>
     </MudHidden>
-    <MudItem xs="12" sm="12">
-        <MudPaper Class="d-flex align-center justify-center py-8">
-            <MudText Typo="Typo.h6">Temperatur</MudText>
-            <MudChart ChartType="ChartType.Line" ChartSeries="@Series" @bind-SelectedIndex="Index" XAxisLabels="@XAxisLabels" Width="100%" Height="350px"></MudChart>
+
+    @foreach (Cache.DataList item in localData)
+    {    
+    <MudItem xs="12">
+        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
+            <div class="col-sm-12 my-5"> 
+                <RadzenChart @ref="radzenChart">
+                    <RadzenLineSeries Data="@item.dataObjects.ToArray()" ValueProperty="value" CategoryProperty="timestamp" Title="@item.topic" >
+                        <RadzenMarkers MarkerType="MarkerType.Square" />
+                    </RadzenLineSeries>
+                </RadzenChart>
+            </div>
         </MudPaper>
     </MudItem>
-    <MudItem xs="12" sm="12">
-        <MudPaper Class="d-flex align-center justify-center py-8">
-            <MudText Typo="Typo.h6">Luftfeuchtigkeit</MudText>
-            <MudChart ChartType="ChartType.Line" ChartSeries="@Series" @bind-SelectedIndex="Index" XAxisLabels="@XAxisLabels" Width="100%" Height="350px"></MudChart>
-        </MudPaper>
-    </MudItem>
-    <MudItem xs="12" sm="12">
-        <MudPaper Class="d-flex align-center justify-center py-8">
-            <MudText Typo="Typo.h6">Luftdruck</MudText>
-            <MudChart ChartType="ChartType.Line" ChartSeries="@Series" @bind-SelectedIndex="Index" XAxisLabels="@XAxisLabels" Width="100%" Height="350px"></MudChart>
-        </MudPaper>
-    </MudItem>
+    }
 </MudGrid>
 
 @code {
-    private int Index = -1; //default value cannot be 0 -> first selectedindex is 0.
+    RadzenChart radzenChart = new();
 
-    public List<ChartSeries> Series = new List<ChartSeries>()
-{
-        new ChartSeries() { Name = "Series 1", Data = new double[] { 90, 79, 72, 69, 62, 62, 55, 65, 70 } },
-    };
-    public string[] XAxisLabels = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep" };
+    List<Cache.DataList> localData = Cache.Data;
+
+    private string timespan;
 
     private bool _debug { get; set; } = true;
 
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+
+        localData = Cache.Data;
+        radzenChart.Reload();
+    }
+
 }
+
+
+
