@@ -2034,32 +2034,34 @@
     ]
   },
   "packageFolders": {
-    "/Users/manuelyates/.nuget/packages/": {}
+    "C:\\Users\\manue\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Server/BBS_Wittlich.Weatherstation.Server.csproj",
+      "projectUniqueName": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\BBS_Wittlich.Weatherstation.Server.csproj",
       "projectName": "BBS_Wittlich.Weatherstation.Server",
-      "projectPath": "/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Server/BBS_Wittlich.Weatherstation.Server.csproj",
-      "packagesPath": "/Users/manuelyates/.nuget/packages/",
-      "outputPath": "/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Server/obj/",
+      "projectPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\BBS_Wittlich.Weatherstation.Server.csproj",
+      "packagesPath": "C:\\Users\\manue\\.nuget\\packages\\",
+      "outputPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/manuelyates/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\manue\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/BBS_Wittlich.Weatherstation.Data.csproj": {
-              "projectPath": "/Users/manuelyates/Documents/GitHub/BBS_WeatherStation/Source/BBS_Wittlich/BBS_Wittlich.Weatherstation.Data.Repositories/BBS_Wittlich.Weatherstation.Data.csproj"
+            "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj": {
+              "projectPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\BBS_Wittlich\\BBS_Wittlich.Weatherstation.Data.Repositories\\BBS_Wittlich.Weatherstation.Data.csproj"
             }
           }
         }
@@ -2101,7 +2103,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.203/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
