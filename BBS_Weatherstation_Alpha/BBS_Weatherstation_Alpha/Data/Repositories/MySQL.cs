@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using BBS_Weatherstation_SeriesA.Data.Models;
 using MySql.Data.MySqlClient;
-using static BBS_Weatherstation_SeriesA.Data.Global.Cache;
+using static BBS_Weatherstation_SeriesA.Data.Global.Storage;
 
 namespace BBS_Weatherstation_SeriesA.Data.Repositories
 {
@@ -52,7 +52,7 @@ namespace BBS_Weatherstation_SeriesA.Data.Repositories
         {
             MySqlConnection _connection = new MySqlConnection($"server=localhost;userid=Hans;password=1234;database=BBS_Wetterstation");
 
-            MySqlCommand cmd = new MySqlCommand(statement, _connection);
+            MySqlCommand cmd = new(statement, _connection);
 
             _connection.Open();
             cmd.ExecuteNonQuery();

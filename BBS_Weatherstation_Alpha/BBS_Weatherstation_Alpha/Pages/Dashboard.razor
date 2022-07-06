@@ -1,15 +1,17 @@
 ﻿@using BBS_Weatherstation_SeriesA.Data.Global
+@using BBS_Weatherstation_SeriesA.Data.Models
+@using BBS_Weatherstation_SeriesA.Data.Repositories
 @using Radzen.Blazor
 @page "/dashboard"
 
 <MudGrid>
     <MudItem xs="12" >
         <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
-            <MudSelect T="string" Label="Daten" AnchorOrigin="Origin.BottomCenter">
-                <MudSelectItem Value="@("all")" />
-                @foreach(string measurement in Cache.Measurements)
+            <MudSelect @bind-Value="dataQuery.measurement" T="string" Label="Daten" AnchorOrigin="Origin.BottomCenter">
+                <MudSelectItem Value="@placeholder" />
+                @foreach(string measurement in Storage.Measurements)
                 {
-                    <MudSelectItem Disabled="true" Value="@(measurement)" />
+                    <MudSelectItem Disabled="true" Value="@measurement" />
                 }
             </MudSelect>
         </MudPaper>
@@ -17,11 +19,11 @@
     <MudItem xs="12" >
         <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
             <MudButtonGroup Color="Color.Primary" Variant="Variant.Outlined">
-                <MudButton OnClick=@(() => timespan = "today" )>Heute</MudButton>
-                <MudButton OnClick=@(() => timespan = "yesterday" )>Gestern</MudButton>
-                <MudButton OnClick=@(() => timespan = "week" )>1 Woche</MudButton>
-                <MudButton OnClick=@(() => timespan = "month" )>1 Monat</MudButton>
-                <MudButton OnClick=@(() => timespan = "year" )>1 Jahr</MudButton>
+                <MudButton OnClick=@(() => dataQuery.timespan = timespan.today )>Heute</MudButton>
+                <MudButton OnClick=@(() => dataQuery.timespan = timespan.yesterday )>Gestern</MudButton>
+                <MudButton OnClick=@(() => dataQuery.timespan = timespan.lastweek )>1 Woche</MudButton>
+                <MudButton OnClick=@(() => dataQuery.timespan = timespan.lastmonth )>1 Monat</MudButton>
+                <MudButton OnClick=@(() => dataQuery.timespan = timespan.lastyear )>1 Jahr</MudButton>
                 <MudButton>Alle</MudButton>
             </MudButtonGroup>
             <MudSpacer />
@@ -37,7 +39,7 @@
         </MudItem>
     </MudHidden>
 
-    @foreach (Cache.DataList item in localData)
+    @foreach (Storage.DataList item in clientStorage)
     {    
     <MudItem xs="12">
         <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
@@ -55,10 +57,11 @@
 
 @code {
     RadzenChart radzenChart = new();
+    DataQuery dataQuery = new();
 
-    List<Cache.DataList> localData = Cache.Data;
-
-    private string timespan;
+    List<Storage.DataList> serverStorage = Storage.Data;
+    List<Storage.DataList> clientStorage = Storage.Data;
+    static string placeholder = "all";
 
     private bool _debug { get; set; } = true;
 
@@ -66,7 +69,7 @@
     {
         base.OnAfterRender(firstRender);
 
-        localData = Cache.Data;
+		//clientStorage = ClientStorageRepo.Get(dataQuery, serverStorage).dataObjects;
         radzenChart.Reload();
     }
 

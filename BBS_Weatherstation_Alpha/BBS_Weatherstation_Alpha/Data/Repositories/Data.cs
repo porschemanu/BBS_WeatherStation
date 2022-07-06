@@ -6,7 +6,7 @@ using System.Diagnostics;
 
 namespace BBS_Weatherstation_SeriesA.Data.Repositories
 {
-    public class DataRepo
+    public class test
     {
         public static async Task CleanData()
         {
@@ -16,15 +16,15 @@ namespace BBS_Weatherstation_SeriesA.Data.Repositories
             stopwatch.Start();
             List<WeatherEntry> allWeatherdata = MySQL.Get().ToList();
             List<string> topics = new List<string>();
-            statements.Add($"USE bbs_wetterstation;");
-            statements.Add($"CREATE TABLE IF NOT EXISTS measurements(measurement varchar(255) PRIMARY KEY NOT NULL);");
+            MySQL.SQLWrite($"USE bbs_wetterstation;");
+            MySQL.SQLWrite($"CREATE TABLE IF NOT EXISTS measurements(measurement varchar(255) PRIMARY KEY NOT NULL);");
 
             foreach (WeatherEntry entry in allWeatherdata)
             {
                 if (!topics.Contains(entry.topic))
                 {
                     topics.Add(entry.topic);
-                    statements.Add($"INSERT INTO measurements(measurement) VALUES('{entry.topic}');");
+                    MySQL.SQLWrite($"INSERT INTO measurements(measurement) VALUES('{entry.topic}');");
                 }
             }
 
@@ -33,7 +33,7 @@ namespace BBS_Weatherstation_SeriesA.Data.Repositories
                 List<WeatherEntry> topicWeatherdata = MySQL.Get(topic).OrderByDescending(e => e.timestamp).ToList();
 
                 Console.WriteLine($"Now cleaning: {topic}");
-                statements.Add($"CREATE TABLE IF NOT EXISTS {topic} (id int PRIMARY KEY NOT NULL AUTO_INCREMENT, Payload double, Timestamp datetime);");
+                MySQL.SQLWrite($"CREATE TABLE IF NOT EXISTS {topic} (id int PRIMARY KEY NOT NULL AUTO_INCREMENT, Payload double, Timestamp datetime);");
 
                 while (topicWeatherdata.Count != 0)
                 {
@@ -67,56 +67,57 @@ namespace BBS_Weatherstation_SeriesA.Data.Repositories
                     finalWeatherEntry.topic = topic;
                     finalWeatherEntry.value = sumValue / timespanEntries.Count;
                     finalWeatherEntry.timestamp = startDateTime;
-                    statements.Add($"INSERT INTO `{finalWeatherEntry.topic}` (`Payload`, `Timestamp`) VALUES({finalWeatherEntry.value.ToString().Replace(',', '.')}, CAST('{finalWeatherEntry.timestamp.ToString("yyyy-MM-dd HH:mm")}' AS datetime));");
+                    MySQL.SQLWrite($"INSERT INTO `{finalWeatherEntry.topic}` (`Payload`, `Timestamp`) VALUES('{finalWeatherEntry.value.ToString().Replace(',', '.')}', CAST('{finalWeatherEntry.timestamp.ToString("yyyy-MM-dd HH:mm")}' AS datetime));");
                     foreach (WeatherEntry weatherEntry in timespanEntries)
                     {
                         topicWeatherdata.Remove(weatherEntry);
                     }
                 }
 
-            }
-            statements.Add("TRUNCATE TABLE MQTT;");
-            string SQL = "";
-            int i = 1;
-            foreach (string statement in statements)
-            {
-                SQL += statement;
-                Console.WriteLine($"{i}/{statements.Count}");
-                //SQLExecuter(statement);
-                i++;
-            }
+                string SQL = "";
+                //for (int i = 0; i < statements.Count; i++)
+                //{
+                //    SQL += statements[i];
 
-            try
-            {
-                MySQL.SQLWrite(SQL);
-            }
-            catch (MySqlException e)
-            {
-                Console.WriteLine(e);
-            }
+                //    if (i % 100 == 0)
+                //    {
+                //        try
+                //        {
+                //            Console.WriteLine("Execute SQL");
+                //            MySQL.SQLWrite(SQL);
+                //            SQL = "";
+                //        }
+                //        catch (MySqlException e)
+                //        {
+                //            Console.WriteLine(e);
+                //        }
+                //    }
+                //}
 
+            }
+            MySQL.SQLWrite("TRUNCATE TABLE MQTT;");
             stopwatch.Stop();
             Console.WriteLine($"DataCleaner Finished in {stopwatch.Elapsed.TotalSeconds}");
         }
 
         public static async Task FillCache()
-        {
-            Cache.Measurements =  MySQL.GetMeasurements();
+        {            
+            Storage.Measurements =  MySQL.GetMeasurements();
 
-            if (Cache.Data == null) 
+            if (Storage.Data == null) 
             {
-                Cache.Data = new();
+                Storage.Data = new();
             }
             else
             {
-                Cache.Data.Clear();
+                Storage.Data.Clear();
             }
-            foreach (string measurement in Cache.Measurements)
+            foreach (string measurement in Storage.Measurements)
             {
-                Cache.DataList dataList = new();
+                Storage.DataList dataList = new();
                 dataList.topic = measurement;
                 dataList.dataObjects = MySQL.GetDataObjects(measurement);
-                Cache.Data.Add(dataList);
+                Storage.Data.Add(dataList);
             }
         }
 

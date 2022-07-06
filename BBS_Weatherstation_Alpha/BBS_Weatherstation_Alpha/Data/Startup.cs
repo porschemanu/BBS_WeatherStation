@@ -6,16 +6,16 @@ namespace BBS_Weatherstation_SeriesA.Data.Startup
         public static async Task<Task> StartupProcedure()
         {
             TableExists();
-            await DataRepo.CleanData();
-            await DataRepo.FillCache();
+            await test.CleanData();
+            await test.FillCache();
             Task.Run(() => SystemProcedure());
             return Task.CompletedTask;
         }
 
         public static async Task SystemProcedure()
         {
-            await DataRepo.CleanData();
-            DataRepo.FillCache();
+            await test.CleanData();
+            test.FillCache();
 
             await Task.Delay(600000);
             SystemProcedure();
