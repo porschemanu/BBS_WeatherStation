@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XaWwibBWv1n3zNC36zla0F3dH6t2KMMTFVseHG+SUn4=",
+  "Hash": "HGoG1YONW2xtes6Kocjb5PXR2dGpu+vvTIUXmlO8ZQk=",
   "Source": "Server",
   "BasePath": "_content/Server",
   "Mode": "Default",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "C:\\Users\\manue\\.nuget\\packages\\mudblazor\\6.0.11\\staticwebassets\\MudBlazor.min.js"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\obj\\Release\\net6.0\\linux-arm\\scopedcss\\bundle\\Server.styles.css",
+      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\obj\\Release\\net6.0\\scopedcss\\bundle\\Server.styles.css",
       "SourceId": "Server",
       "SourceType": "Computed",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\obj\\Release\\net6.0\\linux-arm\\scopedcss\\bundle\\",
+      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\obj\\Release\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Server",
       "RelativePath": "Server.styles.css",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\obj\\Release\\net6.0\\linux-arm\\scopedcss\\bundle\\Server.styles.css"
+      "OriginalItemSpec": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\obj\\Release\\net6.0\\scopedcss\\bundle\\Server.styles.css"
     },
     {
-      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\obj\\Release\\net6.0\\linux-arm\\scopedcss\\projectbundle\\Server.bundle.scp.css",
+      "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\Server.bundle.scp.css",
       "SourceId": "Server",
       "SourceType": "Computed",
-      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\obj\\Release\\net6.0\\linux-arm\\scopedcss\\projectbundle\\",
+      "ContentRoot": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Server",
       "RelativePath": "Server.bundle.scp.css",
       "AssetKind": "All",
@@ -82,7 +82,7 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\obj\\Release\\net6.0\\linux-arm\\scopedcss\\projectbundle\\Server.bundle.scp.css"
+      "OriginalItemSpec": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\Server.bundle.scp.css"
     },
     {
       "Identity": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
