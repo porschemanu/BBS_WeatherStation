@@ -16,13 +16,13 @@ namespace Server.Repositories
 
         public List<DataEntry> Get(DateTime start, DateTime end, string topic)
         {
-            return _context.DataEntries.Where(x => x.Timestamp >= start && x.Timestamp <= end && x.Topic == topic).ToList();
+            return _context.dataentries.Where(x => x.Timestamp >= start && x.Timestamp <= end && x.Topic == topic).ToList();
         }
 
         public List<string> GetTopics()
         {
             List<string> topics = new List<string>();
-            foreach (DataEntry entry in _context.DataEntries.Where(x => !topics.Contains(x.Topic)))
+            foreach (DataEntry entry in _context.dataentries.Where(x => !topics.Contains(x.Topic)))
             {
                 topics.Add(entry.Topic);
             }

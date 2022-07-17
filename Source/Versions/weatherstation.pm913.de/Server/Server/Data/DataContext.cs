@@ -13,6 +13,6 @@ namespace Server.Data
         {
             
         }
-        public virtual DbSet<DataEntry> DataEntries { get; set; }
+        public virtual DbSet<DataEntry> dataentries { get; set; }
     }
 }
