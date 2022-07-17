@@ -11,7 +11,8 @@
           "EntityFramework": "6.4.4",
           "MudBlazor": "6.0.11",
           "MySql.Data": "8.0.29",
-          "MySql.EntityFrameworkCore": "6.0.1"
+          "MySql.EntityFrameworkCore": "6.0.1",
+          "Radzen.Blazor": "3.19.5"
         },
         "runtime": {
           "Server.dll": {}
@@ -86,6 +87,7 @@
           }
         }
       },
+      "LibSassBuilder/2.0.1": {},
       "Microsoft.AspNetCore.Authorization/6.0.6": {
         "dependencies": {
           "Microsoft.AspNetCore.Metadata": "6.0.6",
@@ -324,6 +326,21 @@
           }
         }
       },
+      "Radzen.Blazor/3.19.5": {
+        "dependencies": {
+          "LibSassBuilder": "2.0.1",
+          "Microsoft.AspNetCore.Components": "6.0.6",
+          "Microsoft.AspNetCore.Components.Web": "6.0.6",
+          "Microsoft.CSharp": "4.7.0",
+          "System.Linq.Dynamic.Core": "1.2.12"
+        },
+        "runtime": {
+          "lib/net5.0/Radzen.Blazor.dll": {
+            "assemblyVersion": "3.19.5.0",
+            "fileVersion": "3.19.5.0"
+          }
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
         "dependencies": {
           "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
@@ -451,6 +468,14 @@
           }
         }
       },
+      "System.Linq.Dynamic.Core/1.2.12": {
+        "runtime": {
+          "lib/net5.0/System.Linq.Dynamic.Core.dll": {
+            "assemblyVersion": "1.2.12.0",
+            "fileVersion": "1.2.12.0"
+          }
+        }
+      },
       "System.Memory/4.5.4": {},
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Security.AccessControl/4.7.0": {
@@ -561,6 +586,13 @@
       "sha512": "sha512-jCfNP0inx1sGcP3KSbpiDEH3km2e1sVBjMfKo+V92jr1dL4ZYgA1uhRMl1wAtdGZcbObXIikKqtVlgx3j/CW6g==",
       "path": "k4os.hash.xxhash/1.0.6",
       "hashPath": "k4os.hash.xxhash.1.0.6.nupkg.sha512"
+    },
+    "LibSassBuilder/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-f+7TWQtCirW94VdzKL9SaAfeSF96TeEqdtDztmTGbndrcUlZZlL6uJLZKQCXQgj1BB3OqX0584OCvqFHrkAusA==",
+      "path": "libsassbuilder/2.0.1",
+      "hashPath": "libsassbuilder.2.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/6.0.6": {
       "type": "package",
@@ -751,6 +783,13 @@
       "path": "mysql.entityframeworkcore/6.0.1",
       "hashPath": "mysql.entityframeworkcore.6.0.1.nupkg.sha512"
     },
+    "Radzen.Blazor/3.19.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+dtN5FZVuLFZeT9gzpEPtdgAehme5ZN1yNsDLY8zWKecvgrBpe3v1SW12WKwig8QxxlycReQ1CTCcIGz9cgvJg==",
+      "path": "radzen.blazor/3.19.5",
+      "hashPath": "radzen.blazor.3.19.5.nupkg.sha512"
+    },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "type": "package",
       "serviceable": true,
@@ -841,6 +880,13 @@
       "sha512": "sha512-ryTgF+iFkpGZY1vRQhfCzX0xTdlV3pyaTTqRu2ETbEv+HlV7O6y7hyQURnghNIXvctl5DuZ//Dpks6HdL/Txgw==",
       "path": "system.io.pipelines/6.0.3",
       "hashPath": "system.io.pipelines.6.0.3.nupkg.sha512"
+    },
+    "System.Linq.Dynamic.Core/1.2.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wJDLhidcJnLAJeZ4z10YVAxMm4rTW0zlYmUjriJTo4eGLHD5NKZOm6qFabkn5TinbfZ6LM9LeYFPyiQMpRly3Q==",
+      "path": "system.linq.dynamic.core/1.2.12",
+      "hashPath": "system.linq.dynamic.core.1.2.12.nupkg.sha512"
     },
     "System.Memory/4.5.4": {
       "type": "package",

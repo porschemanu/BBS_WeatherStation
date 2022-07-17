@@ -1,9 +1,23 @@
 ﻿@page "/"
-
+@using Server.Repositories
+@inject DataRepo datarepo
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<MudGrid>
+    <MudItem xs="12">
+        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8"></MudPaper>
+    </MudItem>
+    <MudItem xs="12">
+        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8"></MudPaper>
+    </MudItem>
+    <MudItem xs="12">
+        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8"></MudPaper>
+    </MudItem>
+     <MudItem xs="12">
+        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8"></MudPaper>
+    </MudItem>
+</MudGrid>
 
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+@code{
+   
+}

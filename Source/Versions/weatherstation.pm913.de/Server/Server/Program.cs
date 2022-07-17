@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.EntityFrameworkCore;
 using MudBlazor.Services;
+using Server.Data;
+using Server.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddMudServices();
+builder.Services.AddDbContext<DataContext>(options =>
+{
+    options.UseMySQL("server=localhost;database=bbs_wetterstation;user=WebServer;password=Wittlich");
+});
+builder.Services.AddTransient<DataRepo>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

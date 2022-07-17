@@ -66,3 +66,5 @@ X:\GitHub\BBS_WeatherStation\Source\Versions\weatherstation.pm913.de\Server\Serv
 X:\GitHub\BBS_WeatherStation\Source\Versions\weatherstation.pm913.de\Server\Server\obj\Debug\net6.0\Server.pdb
 X:\GitHub\BBS_WeatherStation\Source\Versions\weatherstation.pm913.de\Server\Server\obj\Debug\net6.0\Server.genruntimeconfig.cache
 X:\GitHub\BBS_WeatherStation\Source\Versions\weatherstation.pm913.de\Server\Server\obj\Debug\net6.0\ref\Server.dll
+X:\GitHub\BBS_WeatherStation\Source\Versions\weatherstation.pm913.de\Server\Server\bin\Debug\net6.0\Radzen.Blazor.dll
+X:\GitHub\BBS_WeatherStation\Source\Versions\weatherstation.pm913.de\Server\Server\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll

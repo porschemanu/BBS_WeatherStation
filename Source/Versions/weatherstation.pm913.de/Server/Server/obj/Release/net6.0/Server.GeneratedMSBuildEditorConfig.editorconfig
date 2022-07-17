@@ -19,6 +19,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[X:/GitHub/BBS_WeatherStation/Source/Versions/weatherstation.pm913.de/Server/Server/Components/Diagram.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEaWFncmFtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [X:/GitHub/BBS_WeatherStation/Source/Versions/weatherstation.pm913.de/Server/Server/Pages/Dashboard.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
