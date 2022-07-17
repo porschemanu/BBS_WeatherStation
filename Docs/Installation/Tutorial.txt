@@ -51,13 +51,15 @@ MariaDB + MySql:
 sudo apt install mariadb-server
 
 sudo mysql -u root -p
-CREATE DATABASE BBS_Wetterstation;
+CREATE DATABASE bbs_wetterstation;
 CREATE USER 'NodeRed'@'%' IDENTIFIED BY 'nodered';
 CREATE USER 'WebServer'@'%' IDENTIFIED BY 'Wittlich';
 
-GRANT ALL PRIVILEGES ON BBS_Wetterstation.* to 'NodeRed'@'%' IDENTIFIED BY 'nodered';
-GRANT ALL PRIVILEGES ON BBS_Wetterstation.* to 'Admin'@'%' IDENTIFIED BY 'root';
-GRANT ALL PRIVILEGES ON BBS_Wetterstation.* to 'WebServer'@'%' IDENTIFIED BY 'Wittlich';
+GRANT ALL PRIVILEGES ON bbs_wetterstation.* to 'NodeRed'@'%' IDENTIFIED BY 'nodered';
+GRANT ALL PRIVILEGES ON *.* TO 'Admin'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON bbs_wetterstation.* to 'WebServer'@'%' IDENTIFIED BY 'Wittlich';
+
+
 
 FLUSH PRIVILEGES;
 
