@@ -11,10 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddMudServices();
-builder.Services.AddDbContext<DataContext>(options =>
-{
-    options.UseMySQL("server=localhost;database=bbs_wetterstation;user=WebServer;password=Wittlich");
-});
+builder.Services.AddDbContext<DataContext>(
+    dbContextOptions => { dbContextOptions.UseMySql("server=localhost;database=bbs_wetterstation;user=WebServer;password=Wittlich", ServerVersion.AutoDetect("server=localhost;database=bbs_wetterstation;user=WebServer;password=Wittlich")); }    
+);
 builder.Services.AddTransient<DataRepo>();
 var app = builder.Build();
 
