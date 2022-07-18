@@ -1,4 +1,5 @@
 ﻿@page "/dashboard"
+@using Server.Enums
 @using Server.Repositories
 @inject DataRepo datarepo
 <MudContainer MaxWidth="MaxWidth.ExtraLarge">
@@ -33,7 +34,7 @@
 						<MudTextField T="DateTime" Format="yyyy-MM-dd" Label="EndDate" @bind-Value=_end InputType="InputType.Date" />
 					</MudItem>
 					<MudItem Class="d-flex align-center justify-center mud-width-full py-8" xs="12">
-						<MudSlider  TickMarks="true" Step="50" Value="@_accuracy" TickMarkLabels="labels">Accuracy</MudSlider>
+						<MudSlider  TickMarks="true" Step="50" Value="@_precision" TickMarkLabels="labels">Accuracy</MudSlider>
 					</MudItem>
 				}
 			</MudGrid>
@@ -48,8 +49,8 @@
 	private bool _advancedSettings { get; set; }
 	private DateTime _start { get; set; } = DateTime.Today.AddDays(-7);
 	private DateTime _end { get; set; } = DateTime.Today;
-	private int _accuracy { get; set; } = 50;
 	private string[] labels = new string[] { "Low", "Medium", "High" };
+	private TimespanEnum timespan { get; set; } = TimespanEnum.Today;
+	private PrecisionEnum _precision { get; set; } = PrecisionEnum.Medium;
 
-	
 }
