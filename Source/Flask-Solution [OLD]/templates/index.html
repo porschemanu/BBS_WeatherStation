@@ -1,0 +1,28 @@
+<html>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/master.css') }}">
+
+<head>
+    <title>BBS Wittlich Wettterstation - Vers. 0.1</title>
+</head>
+
+<body>
+    <div id="index_main_header">
+        <img src="{{ url_for('static', filename='img/logo-header.png') }}" alt="">
+        <h1>Wetterstation</h1>
+        <p id="last_update">Test </p>
+    </div>
+
+    <div id="index_content">
+    </div>
+
+    <script>
+        set_global('{{SettingsDataRAW | tojson}}',{{WeatherData|tojson}});
+        document.getElementById("index_content").innerHTML = index_build_mask();
+        index_fill_mask();
+    </script>
+</body>
+
+</html>

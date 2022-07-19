@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*index*/
+
+#index{
+
+}
+
+#index_main_header{
+  position: relative;
+  top: 0;
+  background-color: white;
+  height: 10%;
+}
+
+#index_main_header img{
+  margin: 0;
+  max-height: 90%;
+}
+
+#index_main_header h1{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  right: 0;
+  top: 30%;
+  left: 0;
+}
+
+#index_main_header p{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#index_content{
+  background-color: darkgray;
+  position: relative;
+  height: 90%;
+  width: 100%;
+  bottom: 0;
+}
+
+/*One Value*/
+
+.index_diagram_one table{
+
+}
+
+.index_diagram_one td{
+
+}
+
+.index_diagram_one h1{
+
+}
+
+/*Two Value*/
+
+.index_diagram_two table{
+
+}
+
+.index_diagram_two td{
+
+}
+
+.index_diagram_two h1{
+
+}
+
+/*Three Value*/
+
+.index_diagram_three{
+  width: 100%;
+  height: 90%;
+  border-spacing: 50px;
+}
+
+.index_diagram_three tr{
+  width: 100%;
+  height: 100%;
+}
+
+.index_diagram_three td{
+  background-color: #ffffff;
+  height: 85%;
+  width: 30%;
+  padding: 5%;
+  margin: 50%;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 5px 5px 24px -2px rgba(0,0,0,0.62)
+}
+
+.index_diagram_three h1{
+
+}
+
+/*Four Value*/
+
+.index_diagram_four table{
+
+}
+
+.index_diagram_four td{
+
+}
+
+.index_diagram_four h1{
+
+}
+
+/*More than Four Value | Over Four*/
+
+.index_diagram_Ofour{
+  width: 100%;
+  height: 90%;
+  border-spacing: 50px;
+}
+
+.index_diagram_Ofour td{
+  background-color: #ffffff;
+  height: 85%;
+  width: 30%;
+  padding: 5%;
+  margin: 50%;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 5px 5px 24px -2px rgba(0,0,0,0.62)
+
+}
+
+.index_diagram_Ofour h1{
+
+}
+
+/*settings*/
+
+#settings_table table tr td{
+  border: 1px solid black;
+}
+
+/*widget*/

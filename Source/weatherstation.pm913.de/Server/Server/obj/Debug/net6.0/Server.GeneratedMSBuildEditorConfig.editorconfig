@@ -1,0 +1,56 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Server
+build_property.RootNamespace = Server
+build_property.ProjectDir = X:\GitHub\BBS_WeatherStation\Source\weatherstation.pm913.de\Server\Server\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = X:\GitHub\BBS_WeatherStation\Source\weatherstation.pm913.de\Server\Server
+build_property._RazorSourceGeneratorDebug = 
+
+[X:/GitHub/BBS_WeatherStation/Source/weatherstation.pm913.de/Server/Server/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[X:/GitHub/BBS_WeatherStation/Source/weatherstation.pm913.de/Server/Server/Components/Diagram.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEaWFncmFtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[X:/GitHub/BBS_WeatherStation/Source/weatherstation.pm913.de/Server/Server/Pages/Dashboard.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[X:/GitHub/BBS_WeatherStation/Source/weatherstation.pm913.de/Server/Server/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[X:/GitHub/BBS_WeatherStation/Source/weatherstation.pm913.de/Server/Server/Pages/Live.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGl2ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[X:/GitHub/BBS_WeatherStation/Source/weatherstation.pm913.de/Server/Server/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[X:/GitHub/BBS_WeatherStation/Source/weatherstation.pm913.de/Server/Server/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-kkt30o18ti
+
+[X:/GitHub/BBS_WeatherStation/Source/weatherstation.pm913.de/Server/Server/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[X:/GitHub/BBS_WeatherStation/Source/weatherstation.pm913.de/Server/Server/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[X:/GitHub/BBS_WeatherStation/Source/weatherstation.pm913.de/Server/Server/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

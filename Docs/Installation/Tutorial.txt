@@ -53,6 +53,7 @@ sudo apt install mariadb-server
 sudo mysql -u root -p
 CREATE DATABASE bbs_wetterstation;
 CREATE USER 'NodeRed'@'%' IDENTIFIED BY 'nodered';
+CREATE USER 'Admin'@'%' IDENTIFIED BY 'root';
 CREATE USER 'WebServer'@'%' IDENTIFIED BY 'Wittlich';
 
 GRANT ALL PRIVILEGES ON bbs_wetterstation.* to 'NodeRed'@'%' IDENTIFIED BY 'nodered';

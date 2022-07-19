@@ -1,0 +1,6 @@
+X:\GitHub\BBS_WeatherStation\Source\Versions\weatherstation.pm913.de\Server\Server\obj\Release\net6.0\win-x86\PubTmp\Out\appsettings.Development.json
+X:\GitHub\BBS_WeatherStation\Source\Versions\weatherstation.pm913.de\Server\Server\obj\Release\net6.0\win-x86\PubTmp\Out\appsettings.json
+X:\GitHub\BBS_WeatherStation\Source\Versions\weatherstation.pm913.de\Server\Server\obj\Release\net6.0\win-x86\PubTmp\Out\Server.pdb
+X:\GitHub\BBS_WeatherStation\Source\Versions\weatherstation.pm913.de\Server\Server\obj\Release\net6.0\win-x86\PubTmp\Out\aspnetcorev2_inprocess.dll
+X:\GitHub\BBS_WeatherStation\Source\Versions\weatherstation.pm913.de\Server\Server\obj\Release\net6.0\win-x86\PubTmp\Out\sni.dll
+X:\GitHub\BBS_WeatherStation\Source\Versions\weatherstation.pm913.de\Server\Server\obj\Release\net6.0\win-x86\PubTmp\Out\Server.exe

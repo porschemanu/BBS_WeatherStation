@@ -1,0 +1,106 @@
+{
+  "format": 1,
+  "restore": {
+    "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\Server.csproj": {}
+  },
+  "projects": {
+    "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\Server.csproj",
+        "projectName": "Server",
+        "projectPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\Server.csproj",
+        "packagesPath": "C:\\Users\\manue\\.nuget\\packages\\",
+        "outputPath": "X:\\GitHub\\BBS_WeatherStation\\Source\\Versions\\weatherstation.pm913.de\\Server\\Server\\obj\\publish\\linux-arm\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "X:\\Programme\\Visual Studio Community 2022\\SDK\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\manue\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "MudBlazor": {
+              "target": "Package",
+              "version": "[6.0.11, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.29, )"
+            },
+            "MySql.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Runtime.linux-arm",
+              "version": "[6.0.6, 6.0.6]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-arm",
+              "version": "[6.0.6, 6.0.6]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.linux-arm",
+              "version": "[6.0.6, 6.0.6]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-arm": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

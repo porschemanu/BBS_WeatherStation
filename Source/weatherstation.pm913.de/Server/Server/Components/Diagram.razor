@@ -1,0 +1,49 @@
+﻿@using Radzen.Blazor
+@using Server.Data
+@using Server.Enums
+@using Server.Repositories
+@inject DataRepo datarepo
+<MudItem xs="12">
+	<label>@timeSpan @precision</label>
+	<RadzenChart>
+		<RadzenLineSeries Smooth="@Smooth" Data=@DataEntries CategoryProperty="Timestamp" Title=@Title LineType=@LineType ValueProperty="Value">
+			<RadzenMarkers MarkerType="MarkerType.Square" />
+			<RadzenSeriesDataLabels Visible="@ShowDataLabels" />
+		</RadzenLineSeries>
+	</RadzenChart>
+</MudItem>
+
+@code {
+	protected override void OnAfterRender(bool firstRender)
+	{
+		base.OnAfterRender(firstRender);
+		DataEntries = datarepo.Get(StartDate, EndDate, Title);
+	}
+
+	[Parameter]
+	public TimespanEnum timeSpan { get; set; }
+
+	[Parameter]
+	public int precision { get; set; }
+
+	public List<DataEntry> DataEntries { get; set; }
+
+	[Parameter]
+	public bool Smooth { get; set; }
+
+	[Parameter]
+	public bool ShowDataLabels { get; set; }
+
+	[Parameter]
+	public string Title { get; set; }
+
+	[Parameter]
+	public LineType LineType { get; set; }
+
+	[Parameter]
+	public DateTime StartDate { get; set; } 
+
+	[Parameter]
+	public DateTime EndDate { get; set; }
+
+}
